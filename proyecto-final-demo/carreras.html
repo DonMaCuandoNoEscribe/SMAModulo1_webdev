@@ -100,33 +100,33 @@
                         <div class="sp500-tracker">
                             <!-- TradingView Widget BEGIN -->
                             <div class="tradingview-widget-container" style="height:400px;width:100%;">
-                              <div class="tradingview-widget-container__widget"></div>
+                              <div class="tradingview-widget-container__widget" style="height:calc(100% - 32px);width:100%"></div>
                               <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-overview.js" async>
                               {
-                              "symbols": [
+                              "symbols"; [
                                 ["S&P 500|TVC:SPX"]
                               ],
-                              "chartOnly": false,
-                              "width": "100%",
-                              "height": "400",
-                              "locale": "es",
-                              "colorTheme": "light",
-                              "autosize": false,
-                              "showVolume": false,
-                              "showMA": false,
-                              "hideDateRanges": false,
-                              "hideMarketStatus": false,
-                              "hideSymbolLogo": false,
-                              "scalePosition": "right",
-                              "scaleMode": "Normal",
-                              "fontFamily": "-apple-system, BlinkMacSystemFont, Trebuchet MS, Roboto, Ubuntu, sans-serif",
-                              "fontSize": "10",
-                              "noTimeScale": false,
-                              "valuesTracking": "1",
-                              "changeMode": "price-and-percent",
-                              "chartType": "area",
-                              "isTransparent": false,
-                              "largeChartUrl": ""
+                              "chartOnly"; false,
+                              "width"; "100%",
+                              "height"; "400",
+                              "locale"; "es",
+                              "colorTheme"; "light",
+                              "autosize"; false,
+                              "showVolume"; false,
+                              "showMA"; false,
+                              "hideDateRanges"; false,
+                              "hideMarketStatus"; false,
+                              "hideSymbolLogo"; false,
+                              "scalePosition"; "right",
+                              "scaleMode"; "Normal",
+                              "fontFamily"; "-apple-system, BlinkMacSystemFont, Trebuchet MS, Roboto, Ubuntu, sans-serif",
+                              "fontSize"; "10",
+                              "noTimeScale"; false,
+                              "valuesTracking"; "1",
+                              "changeMode"; "price-and-percent",
+                              "chartType"; "area",
+                              "isTransparent"; false,
+                              "largeChartUrl"; ""
                               }
                               </script>
                             </div>
@@ -138,9 +138,15 @@
                         <div class="career-section">
                             <h4>¿Qué es?</h4>
                             <p>
-                                Las finanzas son el estudio y gestión del dinero, inversiones y otros instrumentos financieros. 
-                                Se enfoca en cómo las personas, empresas y organizaciones asignan recursos a lo largo del tiempo, 
-                                considerando los riesgos y oportunidades del mercado.
+                                <strong>Imagina ser el arquitecto de decisiones que afectan millones de dólares:</strong> 
+                                ¿Debería esta empresa expandirse a otro país? ¿Vale la pena esta inversión? ¿Cómo protegemos 
+                                nuestro capital durante una crisis económica? Los profesionales de finanzas responden estas 
+                                preguntas usando matemáticas, análisis de mercado y pensamiento estratégico.
+                            </p>
+                            <p>
+                                Las finanzas combinan números con decisiones de alto impacto. No se trata solo de "manejar dinero" 
+                                - se trata de entender riesgos, maximizar oportunidades y construir valor para empresas, 
+                                gobiernos y personas.
                             </p>
                         </div>
 
@@ -156,13 +162,47 @@
 
                         <div class="career-section">
                             <h4>Tipos de Trabajos</h4>
-                            <ul>
-                                <li>Analista Financiero / Financial Analyst</li>
-                                <li>Banca de Inversión / Investment Banking</li>
-                                <li>Gestor de Portafolios / Portfolio Manager</li>
-                                <li>Analista de Riesgos / Risk Analyst</li>
-                                <li>Planificador Financiero / Financial Planner</li>
-                            </ul>
+                            <div class="job-types-grid">
+                                <div class="job-type-card">
+                                    <div class="job-type-icon">💼</div>
+                                    <div class="job-type-content">
+                                        <div class="job-type-title">Analista Financiero</div>
+                                        <p class="job-type-description">Desarrollo de modelos predictivos y análisis avanzado de inversiones</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="job-type-card">
+                                    <div class="job-type-icon">🏦</div>
+                                    <div class="job-type-content">
+                                        <div class="job-type-title">Banca de Inversión</div>
+                                        <p class="job-type-description">Asesoría en fusiones, adquisiciones y estructuración financiera</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="job-type-card">
+                                    <div class="job-type-icon">📊</div>
+                                    <div class="job-type-content">
+                                        <div class="job-type-title">Gestor de Portafolios</div>
+                                        <p class="job-type-description">Administración estratégica de inversiones y activos</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="job-type-card">
+                                    <div class="job-type-icon">⚠️</div>
+                                    <div class="job-type-content">
+                                        <div class="job-type-title">Analista de Riesgos</div>
+                                        <p class="job-type-description">Evaluación y mitigación de riesgos financieros</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="job-type-card">
+                                    <div class="job-type-icon">💡</div>
+                                    <div class="job-type-content">
+                                        <div class="job-type-title">Planificador Financiero</div>
+                                        <p class="job-type-description">Asesoría personalizada en gestión patrimonial</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
                         <div class="career-section">
@@ -249,11 +289,15 @@
                                 </g>
                                 <g class="trade-hub-group">
                                     <circle cx="140" cy="240" r="8" class="trade-hub"/>
-                                    <text x="140" y="265" class="hub-label">Perú</text>
+                                    <text x="140" y="265" class="hub-label">LATAM</text>
                                 </g>
                                 <g class="trade-hub-group">
                                     <circle cx="400" cy="140" r="10" class="trade-hub"/>
                                     <text x="400" y="125" class="hub-label">UE</text>
+                                </g>
+                                <g class="trade-hub-group">
+                                    <circle cx="500" cy="240" r="8" class="trade-hub"/>
+                                    <text x="500" y="262" class="hub-label">África</text>
                                 </g>
                                 <g class="trade-hub-group">
                                     <circle cx="650" cy="150" r="12" class="trade-hub major"/>
@@ -295,9 +339,15 @@
                         <div class="career-section">
                             <h4>¿Qué es?</h4>
                             <p>
-                                La economía estudia cómo las sociedades utilizan recursos limitados para producir bienes y servicios, 
-                                y cómo los distribuyen entre diferentes grupos. Analiza el comportamiento de mercados, políticas 
-                                gubernamentales, comercio internacional y desarrollo económico.
+                                <strong>¿Por qué algunos países son ricos y otros pobres? ¿Qué pasaría si subimos el salario mínimo?</strong> 
+                                ¿Cómo afecta el cambio climático a la economía global? Los economistas son los detectives que resuelven 
+                                estos misterios usando datos, teoría y modelos matemáticos. No solo predicen el futuro económico - 
+                                diseñan las políticas que lo crean.
+                            </p>
+                            <p>
+                                La economía va mucho más allá del dinero. Estudia cómo las personas toman decisiones, cómo funcionan 
+                                los mercados, y cómo podemos construir sociedades más prósperas y equitativas. Es la ciencia de entender 
+                                el comportamiento humano a escala masiva.
                             </p>
                         </div>
 
@@ -313,13 +363,47 @@
 
                         <div class="career-section">
                             <h4>Tipos de Trabajos</h4>
-                            <ul>
-                                <li>Economista / Economic Analyst</li>
-                                <li>Analista de Políticas Públicas</li>
-                                <li>Consultor Económico</li>
-                                <li>Analista de Investigación de Mercados</li>
-                                <li>Economista en Organismos Internacionales (FMI, Banco Mundial)</li>
-                            </ul>
+                            <div class="job-types-grid">
+                                <div class="job-type-card">
+                                    <div class="job-type-icon">📈</div>
+                                    <div class="job-type-content">
+                                        <div class="job-type-title">Economista / Economic Analyst</div>
+                                        <p class="job-type-description">Análisis macroeconómico y pronósticos de mercado</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="job-type-card">
+                                    <div class="job-type-icon">🏛️</div>
+                                    <div class="job-type-content">
+                                        <div class="job-type-title">Analista de Políticas Públicas</div>
+                                        <p class="job-type-description">Evaluación de impacto de políticas gubernamentales</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="job-type-card">
+                                    <div class="job-type-icon">💼</div>
+                                    <div class="job-type-content">
+                                        <div class="job-type-title">Consultor Económico</div>
+                                        <p class="job-type-description">Asesoría estratégica en proyectos económicos</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="job-type-card">
+                                    <div class="job-type-icon">🔍</div>
+                                    <div class="job-type-content">
+                                        <div class="job-type-title">Analista de Investigación de Mercados</div>
+                                        <p class="job-type-description">Estudios de comportamiento del consumidor y tendencias</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="job-type-card">
+                                    <div class="job-type-icon">🌍</div>
+                                    <div class="job-type-content">
+                                        <div class="job-type-title">Economista en Organismos Internacionales</div>
+                                        <p class="job-type-description">Trabajo en FMI, Banco Mundial, y entidades multilaterales</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
                         <div class="career-section">
@@ -405,9 +489,15 @@
                         <div class="career-section">
                             <h4>¿Qué es?</h4>
                             <p>
-                                El análisis de datos es el proceso de inspeccionar, limpiar, transformar y modelar datos para 
-                                descubrir información útil. Los analistas convierten datos en recomendaciones accionables 
-                                mediante visualizaciones y análisis estadísticos.
+                                <strong>Imagina tener el poder de encontrar patrones ocultos en millones de datos:</strong> 
+                                ¿Por qué nuestros clientes dejan de comprar? ¿Qué producto deberíamos lanzar próximamente? 
+                                ¿Cómo podemos reducir costos sin afectar la calidad? Los analistas de datos son los traductores 
+                                que convierten números confusos en historias claras y decisiones inteligentes.
+                            </p>
+                            <p>
+                                Cada clic, cada compra, cada interacción genera datos. Los analistas son como arqueólogos digitales 
+                                que descubren tesoros escondidos en esa información. Si te gusta resolver acertijos y contar historias 
+                                con números, este es tu campo.
                             </p>
                         </div>
 
@@ -423,13 +513,47 @@
 
                         <div class="career-section">
                             <h4>Tipos de Trabajos</h4>
-                            <ul>
-                                <li>Analista de Datos / Data Analyst</li>
-                                <li>Analista de Business Intelligence</li>
-                                <li>Analista de Marketing Analytics</li>
-                                <li>Analista de Operaciones</li>
-                                <li>Consultor de Datos</li>
-                            </ul>
+                            <div class="job-types-grid">
+                                <div class="job-type-card">
+                                    <div class="job-type-icon">📊</div>
+                                    <div class="job-type-content">
+                                        <div class="job-type-title">Analista de Datos</div>
+                                        <p class="job-type-description">Extracción de insights y visualización de información</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="job-type-card">
+                                    <div class="job-type-icon">💡</div>
+                                    <div class="job-type-content">
+                                        <div class="job-type-title">Analista de Business Intelligence</div>
+                                        <p class="job-type-description">Desarrollo de dashboards y reportes ejecutivos</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="job-type-card">
+                                    <div class="job-type-icon">📱</div>
+                                    <div class="job-type-content">
+                                        <div class="job-type-title">Analista de Marketing Analytics</div>
+                                        <p class="job-type-description">Optimización de campañas y análisis de conversión</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="job-type-card">
+                                    <div class="job-type-icon">⚙️</div>
+                                    <div class="job-type-content">
+                                        <div class="job-type-title">Analista de Operaciones</div>
+                                        <p class="job-type-description">Mejora de procesos mediante análisis cuantitativo</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="job-type-card">
+                                    <div class="job-type-icon">🎯</div>
+                                    <div class="job-type-content">
+                                        <div class="job-type-title">Consultor de Datos</div>
+                                        <p class="job-type-description">Asesoría estratégica en transformación data-driven</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
                         <div class="career-section">
@@ -662,9 +786,16 @@ model.fit(X_train, y_train, epochs=<span class="number">10</span>)
                         <div class="career-section">
                             <h4>¿Qué es?</h4>
                             <p>
-                                La ciencia de datos utiliza métodos científicos para extraer conocimiento de datos. 
-                                Combina estadística, informática y machine learning para resolver problemas complejos 
-                                y construir modelos predictivos e inteligencia artificial.
+                                <strong>¿Y si pudieras enseñarle a una computadora a predecir el futuro?</strong> 
+                                Los científicos de datos construyen "cerebros artificiales" que aprenden de millones de ejemplos. 
+                                Crean los algoritmos detrás de recomendaciones de Netflix, diagnósticos médicos por IA, carros 
+                                autónomos y sistemas que detectan fraudes antes de que ocurran. Es como ser mago, pero con 
+                                matemáticas y código.
+                            </p>
+                            <p>
+                                La ciencia de datos es la ingeniería del futuro. Mientras los analistas explican el pasado, 
+                                los científicos de datos predicen y crean el futuro. Si te fascina la inteligencia artificial 
+                                y quieres estar en la vanguardia de la tecnología, este es el camino más emocionante.
                             </p>
                         </div>
 
@@ -681,14 +812,55 @@ model.fit(X_train, y_train, epochs=<span class="number">10</span>)
 
                         <div class="career-section">
                             <h4>Tipos de Trabajos</h4>
-                            <ul>
-                                <li><strong>Científico de Datos:</strong> Desarrollo de modelos predictivos y análisis avanzado</li>
-                                <li><strong>Machine Learning Engineer:</strong> Implementación y deployment de modelos ML</li>
-                                <li><strong>Ingeniero de Datos:</strong> Arquitectura de pipelines ETL y data warehousing</li>
-                                <li><strong>AI Researcher:</strong> Investigación en algoritmos de inteligencia artificial</li>
-                                <li><strong>MLOps Engineer:</strong> Automatización y monitoreo de sistemas ML</li>
-                                <li><strong>Data Science Consultant:</strong> Asesoría estratégica en proyectos de datos</li>
-                            </ul>
+                            <div class="job-types-grid">
+                                <div class="job-type-card">
+                                    <div class="job-type-icon">🧠</div>
+                                    <div class="job-type-content">
+                                        <div class="job-type-title">Científico de Datos</div>
+                                        <p class="job-type-description">Desarrollo de modelos predictivos y análisis avanzado</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="job-type-card">
+                                    <div class="job-type-icon">🤖</div>
+                                    <div class="job-type-content">
+                                        <div class="job-type-title">Machine Learning Engineer</div>
+                                        <p class="job-type-description">Implementación y deployment de modelos ML en producción</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="job-type-card">
+                                    <div class="job-type-icon">🔧</div>
+                                    <div class="job-type-content">
+                                        <div class="job-type-title">Ingeniero de Datos</div>
+                                        <p class="job-type-description">Arquitectura de pipelines ETL y data warehousing</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="job-type-card">
+                                    <div class="job-type-icon">🔬</div>
+                                    <div class="job-type-content">
+                                        <div class="job-type-title">AI Researcher</div>
+                                        <p class="job-type-description">Investigación en algoritmos de inteligencia artificial</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="job-type-card">
+                                    <div class="job-type-icon">🚀</div>
+                                    <div class="job-type-content">
+                                        <div class="job-type-title">MLOps Engineer</div>
+                                        <p class="job-type-description">Automatización y monitoreo de sistemas ML</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="job-type-card">
+                                    <div class="job-type-icon">💼</div>
+                                    <div class="job-type-content">
+                                        <div class="job-type-title">Data Science Consultant</div>
+                                        <p class="job-type-description">Asesoría estratégica en proyectos de datos</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
                         <div class="career-section">
