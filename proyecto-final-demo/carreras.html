@@ -45,7 +45,7 @@
                 <!-- University Card -->
                 <div class="university-card">
                     <div class="university-logo-container">
-                        <img src="https://upload.wikimedia.org/wikipedia/en/e/e8/Drexel_University_seal.svg" alt="Drexel University Logo" class="university-logo">
+                        <img src="Drexel.jpg" alt="Drexel University Logo" class="university-logo">
                     </div>
                     <div class="university-header">
                         <div class="university-title">
@@ -95,51 +95,42 @@
                 <div class="career-card-enhanced">
                     <h3>Finanzas</h3>
                     
-                    <!-- Stock Market Visualization -->
+                    <!-- S&P 500 Tracker Visualization -->
                     <div class="visualization-container">
-                        <div class="stock-market">
-                            <div class="ticker-tape">
-                                <div class="ticker-items">
-                                    <span class="ticker-item positive">AAPL +2.5%</span>
-                                    <span class="ticker-item negative">GOOGL -0.8%</span>
-                                    <span class="ticker-item positive">MSFT +1.2%</span>
-                                    <span class="ticker-item positive">AMZN +3.1%</span>
-                                    <span class="ticker-item negative">TSLA -1.5%</span>
-                                    <span class="ticker-item positive">NVDA +4.2%</span>
-                                    <span class="ticker-item negative">META -2.1%</span>
-                                    <span class="ticker-item positive">JPM +1.8%</span>
-                                    <span class="ticker-item positive">BAC +0.9%</span>
-                                    <span class="ticker-item negative">GS -0.5%</span>
-                                    <!-- Duplicate for seamless scroll -->
-                                    <span class="ticker-item positive">AAPL +2.5%</span>
-                                    <span class="ticker-item negative">GOOGL -0.8%</span>
-                                    <span class="ticker-item positive">MSFT +1.2%</span>
-                                    <span class="ticker-item positive">AMZN +3.1%</span>
-                                    <span class="ticker-item negative">TSLA -1.5%</span>
-                                    <span class="ticker-item positive">NVDA +4.2%</span>
-                                    <span class="ticker-item negative">META -2.1%</span>
-                                    <span class="ticker-item positive">JPM +1.8%</span>
-                                    <span class="ticker-item positive">BAC +0.9%</span>
-                                    <span class="ticker-item negative">GS -0.5%</span>
-                                </div>
+                        <div class="sp500-tracker">
+                            <!-- TradingView Widget BEGIN -->
+                            <div class="tradingview-widget-container" style="height:400px;width:100%;">
+                              <div class="tradingview-widget-container__widget"></div>
+                              <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-overview.js" async>
+                              {
+                              "symbols": [
+                                ["S&P 500|TVC:SPX"]
+                              ],
+                              "chartOnly": false,
+                              "width": "100%",
+                              "height": "400",
+                              "locale": "es",
+                              "colorTheme": "light",
+                              "autosize": false,
+                              "showVolume": false,
+                              "showMA": false,
+                              "hideDateRanges": false,
+                              "hideMarketStatus": false,
+                              "hideSymbolLogo": false,
+                              "scalePosition": "right",
+                              "scaleMode": "Normal",
+                              "fontFamily": "-apple-system, BlinkMacSystemFont, Trebuchet MS, Roboto, Ubuntu, sans-serif",
+                              "fontSize": "10",
+                              "noTimeScale": false,
+                              "valuesTracking": "1",
+                              "changeMode": "price-and-percent",
+                              "chartType": "area",
+                              "isTransparent": false,
+                              "largeChartUrl": ""
+                              }
+                              </script>
                             </div>
-                            <div class="chart-area">
-                                <svg class="stock-chart" viewBox="0 0 500 140" xmlns="http://www.w3.org/2000/svg">
-                                    <!-- BIG dramatic movements - fewer points, larger swings -->
-                                    <polyline class="chart-line" points="0,100 15,95 30,110 45,85 60,105 75,70 90,95 105,60 120,90 135,50 150,80 165,45 180,75 195,55 210,85 225,65 240,95 255,75 270,105 285,85 300,110 315,90 330,100 345,85 360,95 375,80 390,90 405,75 420,85 435,70 450,80 465,65 480,75 495,60 500,70" />
-                                    <circle class="chart-dot" cx="500" cy="70" r="4" />
-                                    <!-- Key volatility indicators at major turning points -->
-                                    <circle class="vol-indicator" cx="75" cy="70" r="4" opacity="0.8" fill="#ff5252"/>
-                                    <circle class="vol-indicator" cx="165" cy="45" r="4" opacity="0.8" fill="#ff5252"/>
-                                    <circle class="vol-indicator" cx="270" cy="105" r="4" opacity="0.7" fill="#ffa726"/>
-                                    <circle class="vol-indicator" cx="300" cy="110" r="4" opacity="0.8" fill="#4caf50"/>
-                                    <circle class="vol-indicator" cx="435" cy="70" r="4" opacity="0.7" fill="#4caf50"/>
-                                </svg>
-                                <div class="chart-labels">
-                                    <span class="chart-value positive">+18.7%</span>
-                                    <span class="chart-period">Rendimiento Anual</span>
-                                </div>
-                            </div>
+                            <!-- TradingView Widget END -->
                         </div>
                     </div>
 
@@ -166,10 +157,22 @@
                         <div class="career-section">
                             <h4>Tipos de Trabajos</h4>
                             <ul>
-                                <li><strong>Analista Financiero:</strong> Evaluación de inversiones</li>
-                                <li><strong>Banca de Inversión:</strong> Fusiones y adquisiciones</li>
-                                <li><strong>Gestor de Portafolios:</strong> Administración de fondos</li>
-                                <li><strong>Analista de Riesgos:</strong> Evaluación y mitigación de riesgos</li>
+                                <li>Analista Financiero / Financial Analyst</li>
+                                <li>Banca de Inversión / Investment Banking</li>
+                                <li>Gestor de Portafolios / Portfolio Manager</li>
+                                <li>Analista de Riesgos / Risk Analyst</li>
+                                <li>Planificador Financiero / Financial Planner</li>
+                            </ul>
+                        </div>
+
+                        <div class="career-section">
+                            <h4>Aptitudes Clave para el Éxito</h4>
+                            <ul>
+                                <li>Habilidades analíticas y atención al detalle</li>
+                                <li>Comprensión de mercados financieros y economía</li>
+                                <li>Capacidad de modelamiento financiero</li>
+                                <li>Pensamiento estratégico y evaluación de riesgos</li>
+                                <li>Habilidades de comunicación para presentar análisis complejos</li>
                             </ul>
                         </div>
 
@@ -304,6 +307,29 @@
                                 <li><strong>R:</strong> Análisis estadístico, econometría</li>
                                 <li><strong>Stata:</strong> Análisis de datos panel</li>
                                 <li><strong>Python:</strong> Machine learning aplicado a economía</li>
+                                <li><strong>MATLAB:</strong> Modelamiento económico y simulaciones</li>
+                            </ul>
+                        </div>
+
+                        <div class="career-section">
+                            <h4>Tipos de Trabajos</h4>
+                            <ul>
+                                <li>Economista / Economic Analyst</li>
+                                <li>Analista de Políticas Públicas</li>
+                                <li>Consultor Económico</li>
+                                <li>Analista de Investigación de Mercados</li>
+                                <li>Economista en Organismos Internacionales (FMI, Banco Mundial)</li>
+                            </ul>
+                        </div>
+
+                        <div class="career-section">
+                            <h4>Aptitudes Clave para el Éxito</h4>
+                            <ul>
+                                <li>Pensamiento crítico y analítico</li>
+                                <li>Comprensión de modelos matemáticos y estadísticos</li>
+                                <li>Capacidad de interpretar datos macroeconómicos</li>
+                                <li>Habilidades de comunicación para explicar conceptos complejos</li>
+                                <li>Conocimiento de políticas gubernamentales y comercio internacional</li>
                             </ul>
                         </div>
 
@@ -915,7 +941,7 @@ model.fit(X_train, y_train, epochs=<span class="number">10</span>)
                                 </div>
                             </div>
                             <div class="institution-item cambridge">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/8/8c/University_of_Cambridge_logo.svg" alt="Cambridge Logo" class="univ-logo-img">
+                                <img src="Cambridge.jpg" alt="Cambridge Logo" class="univ-logo-img">
                                 <span class="name">Cambridge</span>
                                 <span class="dept">Faculty of Education</span>
                                 <div class="courses-preview">
@@ -933,7 +959,7 @@ model.fit(X_train, y_train, epochs=<span class="number">10</span>)
                                 </div>
                             </div>
                             <div class="institution-item tsinghua">
-                                <img src="https://upload.wikimedia.org/wikipedia/en/e/e8/Tsinghua_University_Logo.svg" alt="Tsinghua Logo" class="univ-logo-img">
+                                <img src="TsingHua.jpg" alt="Tsinghua Logo" class="univ-logo-img">
                                 <span class="name">Tsinghua</span>
                                 <span class="dept">Educational Technology</span>
                                 <div class="courses-preview">
