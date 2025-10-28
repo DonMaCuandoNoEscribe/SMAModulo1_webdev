@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mis Carreras - José Pérez</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="carreras-visuals.css">
+    <link rel="stylesheet" href="plan-1ano-professional.css">
 </head>
 <body>
     <!-- Header & Navigation -->
@@ -24,301 +26,995 @@
     <!-- Main Content -->
     <main>
         <!-- Hero Section -->
-        <section class="hero">
+        <section class="hero-professional">
             <div class="container">
-                <h1>Mi Formación Académica</h1>
-                <p>Un recorrido por mis estudios y especialización profesional</p>
+                <h1 class="hero-title">Mi Formación Académica</h1>
+                <p class="hero-subtitle">Un recorrido por mis estudios y metas academicas</p>
             </div>
         </section>
 
-        <!-- Undergraduate Section -->
-        <section class="undergraduate">
-            <div class="university-section">
-                <div class="university-header">
-                    <h2>🎓 Pregrado - Drexel University</h2>
-                    <p>Triple especialización en Finanzas, Economía y Análisis de Datos</p>
+        <!-- Collapsible Section 1: Lo que ya estudié -->
+        <section class="collapsible-section">
+            <input type="checkbox" id="section1" class="section-toggle" checked>
+            <label for="section1" class="section-header">
+                <span class="toggle-icon">▼</span>
+                <h2>Lo que ya estudié - Pregrado</h2>
+            </label>
+            
+            <div class="section-content">
+                <!-- University Card -->
+                <div class="university-card">
+                    <div class="university-logo-container">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/e/e8/Drexel_University_seal.svg" alt="Drexel University Logo" class="university-logo">
+                    </div>
+                    <div class="university-header">
+                        <div class="university-title">
+                            <span class="university-flag">🇺🇸</span>
+                            <h3>Drexel University</h3>
+                        </div>
+                        <div class="university-meta">
+                            <span class="location">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align: middle; margin-right: 4px;">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                    <circle cx="12" cy="10" r="3"/>
+                                </svg>
+                                Philadelphia, PA
+                            </span>
+                            <span class="ranking">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align: middle; margin-right: 4px;">
+                                    <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/>
+                                    <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/>
+                                    <path d="M4 22h16"/>
+                                    <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/>
+                                    <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/>
+                                    <path d="M18 2H6v7a6 6 0 0 0 12 0V2z"/>
+                                </svg>
+                                Ranking #98 en EEUU
+                            </span>
+                            <span class="year">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align: middle; margin-right: 4px;">
+                                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                    <line x1="16" y1="2" x2="16" y2="6"/>
+                                    <line x1="8" y1="2" x2="8" y2="6"/>
+                                    <line x1="3" y1="10" x2="21" y2="10"/>
+                                </svg>
+                                Fundada en 1891
+                            </span>
+                        </div>
+                    </div>
+                    <p class="university-description">
+                        Triple especialización en <strong>Finanzas, Economía y Análisis de Datos</strong>. 
+                        Drexel es reconocida por su enfoque en educación cooperativa y conexión con la industria.
+                    </p>
+                    <a href="https://drexel.edu/" target="_blank" class="external-link">
+                        Visitar sitio web de Drexel University ↗
+                    </a>
                 </div>
-            </div>
 
-            <!-- Finanzas Card -->
-            <div class="career-card">
-                <h3>💰 Finanzas</h3>
-                
-                <div class="career-details">
-                    <div class="career-section">
-                        <h4>¿Qué es?</h4>
-                        <p>
-                            Las finanzas son el estudio y gestión del dinero, inversiones y otros instrumentos financieros. 
-                            Se enfoca en cómo las personas, empresas y organizaciones asignan recursos a lo largo del tiempo, 
-                            considerando los riesgos y oportunidades del mercado.
-                        </p>
-                    </div>
-
-                    <div class="career-section">
-                        <h4>Herramientas Tecnológicas</h4>
-                        <ul>
-                            <li><strong>Excel / VBA:</strong> Modelamiento financiero, análisis de inversiones, valuación de empresas</li>
-                            <li><strong>Python:</strong> Análisis cuantitativo, automatización de reportes, backtesting de estrategias</li>
-                            <li><strong>SQL:</strong> Consultas de bases de datos financieras, extracción de datos históricos</li>
-                            <li><strong>Tableau / Power BI:</strong> Visualización de métricas financieras y KPIs</li>
-                        </ul>
-                    </div>
-
-                    <div class="career-section">
-                        <h4>Tipos de Trabajos</h4>
-                        <ul>
-                            <li><strong>Analista Financiero:</strong> Evaluación de inversiones y preparación de informes financieros</li>
-                            <li><strong>Analista de Inversiones:</strong> Análisis de portafolios, acciones y bonos</li>
-                            <li><strong>Banca de Inversión:</strong> Fusiones, adquisiciones, emisión de valores</li>
-                            <li><strong>Gestor de Portafolios:</strong> Administración de fondos de inversión</li>
-                            <li><strong>Planificador Financiero:</strong> Asesoría financiera personal y patrimonial</li>
-                            <li><strong>Analista de Riesgos:</strong> Evaluación y mitigación de riesgos financieros</li>
-                        </ul>
-                    </div>
-
-                    <div class="career-section">
-                        <h4>Aptitudes Clave para el Éxito</h4>
-                        <ul>
-                            <li>Pensamiento analítico y habilidades cuantitativas</li>
-                            <li>Comprensión profunda de mercados y economía</li>
-                            <li>Atención al detalle y precisión</li>
-                            <li>Capacidad de tomar decisiones bajo presión</li>
-                            <li>Comunicación efectiva de información financiera compleja</li>
-                        </ul>
-                    </div>
-
-                    <div class="career-section">
-                        <h4>Rango Salarial</h4>
-                        <div class="salary-info">
-                            <div class="salary-box">
-                                <strong>$60K - $90K</strong>
-                                <span>Estados Unidos (Inicial)</span>
+                <!-- Finance Card with Visualization -->
+                <div class="career-card-enhanced">
+                    <h3>Finanzas</h3>
+                    
+                    <!-- Stock Market Visualization -->
+                    <div class="visualization-container">
+                        <div class="stock-market">
+                            <div class="ticker-tape">
+                                <div class="ticker-items">
+                                    <span class="ticker-item positive">AAPL +2.5%</span>
+                                    <span class="ticker-item negative">GOOGL -0.8%</span>
+                                    <span class="ticker-item positive">MSFT +1.2%</span>
+                                    <span class="ticker-item positive">AMZN +3.1%</span>
+                                    <span class="ticker-item negative">TSLA -1.5%</span>
+                                    <span class="ticker-item positive">NVDA +4.2%</span>
+                                    <span class="ticker-item negative">META -2.1%</span>
+                                    <span class="ticker-item positive">JPM +1.8%</span>
+                                    <span class="ticker-item positive">BAC +0.9%</span>
+                                    <span class="ticker-item negative">GS -0.5%</span>
+                                    <!-- Duplicate for seamless scroll -->
+                                    <span class="ticker-item positive">AAPL +2.5%</span>
+                                    <span class="ticker-item negative">GOOGL -0.8%</span>
+                                    <span class="ticker-item positive">MSFT +1.2%</span>
+                                    <span class="ticker-item positive">AMZN +3.1%</span>
+                                    <span class="ticker-item negative">TSLA -1.5%</span>
+                                    <span class="ticker-item positive">NVDA +4.2%</span>
+                                    <span class="ticker-item negative">META -2.1%</span>
+                                    <span class="ticker-item positive">JPM +1.8%</span>
+                                    <span class="ticker-item positive">BAC +0.9%</span>
+                                    <span class="ticker-item negative">GS -0.5%</span>
+                                </div>
                             </div>
-                            <div class="salary-box">
-                                <strong>S/50K - S/80K</strong>
-                                <span>Perú (Inicial)</span>
+                            <div class="chart-area">
+                                <svg class="stock-chart" viewBox="0 0 500 140" xmlns="http://www.w3.org/2000/svg">
+                                    <!-- BIG dramatic movements - fewer points, larger swings -->
+                                    <polyline class="chart-line" points="0,100 15,95 30,110 45,85 60,105 75,70 90,95 105,60 120,90 135,50 150,80 165,45 180,75 195,55 210,85 225,65 240,95 255,75 270,105 285,85 300,110 315,90 330,100 345,85 360,95 375,80 390,90 405,75 420,85 435,70 450,80 465,65 480,75 495,60 500,70" />
+                                    <circle class="chart-dot" cx="500" cy="70" r="4" />
+                                    <!-- Key volatility indicators at major turning points -->
+                                    <circle class="vol-indicator" cx="75" cy="70" r="4" opacity="0.8" fill="#ff5252"/>
+                                    <circle class="vol-indicator" cx="165" cy="45" r="4" opacity="0.8" fill="#ff5252"/>
+                                    <circle class="vol-indicator" cx="270" cy="105" r="4" opacity="0.7" fill="#ffa726"/>
+                                    <circle class="vol-indicator" cx="300" cy="110" r="4" opacity="0.8" fill="#4caf50"/>
+                                    <circle class="vol-indicator" cx="435" cy="70" r="4" opacity="0.7" fill="#4caf50"/>
+                                </svg>
+                                <div class="chart-labels">
+                                    <span class="chart-value positive">+18.7%</span>
+                                    <span class="chart-period">Rendimiento Anual</span>
+                                </div>
                             </div>
                         </div>
-                        <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">
-                            Nota: Los salarios pueden aumentar significativamente con experiencia. Senior y directivos pueden 
-                            superar $150K+ en EEUU y S/150K+ en Perú.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Economía Card -->
-            <div class="career-card">
-                <h3>📈 Economía</h3>
-                
-                <div class="career-details">
-                    <div class="career-section">
-                        <h4>¿Qué es?</h4>
-                        <p>
-                            La economía estudia cómo las sociedades utilizan recursos limitados para producir bienes y servicios, 
-                            y cómo los distribuyen entre diferentes grupos. Analiza el comportamiento de mercados, políticas 
-                            gubernamentales, comercio internacional y desarrollo económico. Los economistas utilizan modelos 
-                            matemáticos y datos empíricos para comprender fenómenos económicos y predecir tendencias.
-                        </p>
                     </div>
 
-                    <div class="career-section">
-                        <h4>Herramientas Tecnológicas</h4>
-                        <ul>
-                            <li><strong>R:</strong> Análisis estadístico, econometría, modelado de series temporales</li>
-                            <li><strong>Stata:</strong> Software especializado en econometría y análisis de datos panel</li>
-                            <li><strong>Python:</strong> Análisis de políticas, machine learning aplicado a economía</li>
-                        </ul>
-                    </div>
+                    <div class="career-details">
+                        <div class="career-section">
+                            <h4>¿Qué es?</h4>
+                            <p>
+                                Las finanzas son el estudio y gestión del dinero, inversiones y otros instrumentos financieros. 
+                                Se enfoca en cómo las personas, empresas y organizaciones asignan recursos a lo largo del tiempo, 
+                                considerando los riesgos y oportunidades del mercado.
+                            </p>
+                        </div>
 
-                    <div class="career-section">
-                        <h4>Tipos de Trabajos</h4>
-                        <ul>
-                            <li><strong>Economista de Investigación:</strong> Análisis de políticas públicas y tendencias económicas</li>
-                            <li><strong>Analista Económico:</strong> Evaluación de impacto económico para empresas o gobierno</li>
-                            <li><strong>Consultor Económico:</strong> Asesoría a empresas en estrategias de mercado</li>
-                            <li><strong>Economista de Banco Central:</strong> Política monetaria y análisis macroeconómico</li>
-                            <li><strong>Analista de Mercado:</strong> Investigación de tendencias de consumo y competencia</li>
-                        </ul>
-                    </div>
-                    <div class="career-section">
-                        <h4>Aptitudes Clave para el Éxito</h4>
-                        <ul>
-                            <li>Sólida base en matemáticas y estadística</li>
-                            <li>Pensamiento crítico y capacidad analítica</li>
-                            <li>Comprensión de políticas públicas y sociales</li>
-                            <li>Habilidad para interpretar grandes volúmenes de datos</li>
-                            <li>Comunicación clara de conceptos complejos</li>
-                            <li>Curiosidad intelectual y actualización constante</li>
-                        </ul>
-                    </div>
+                        <div class="career-section">
+                            <h4>Herramientas Tecnológicas</h4>
+                            <ul>
+                                <li><strong>Excel / VBA:</strong> Modelamiento financiero, análisis de inversiones</li>
+                                <li><strong>Python:</strong> Análisis cuantitativo, automatización de reportes</li>
+                                <li><strong>SQL:</strong> Consultas de bases de datos financieras</li>
+                                <li><strong>Tableau / Power BI:</strong> Visualización de métricas financieras</li>
+                            </ul>
+                        </div>
 
-                    <div class="career-section">
-                        <h4>Rango Salarial</h4>
-                        <div class="salary-info">
-                            <div class="salary-box">
-                                <strong>$55K - $85K</strong>
-                                <span>Estados Unidos (Inicial)</span>
-                            </div>
-                            <div class="salary-box">
-                                <strong>S/45K - S/75K</strong>
-                                <span>Perú (Inicial)</span>
+                        <div class="career-section">
+                            <h4>Tipos de Trabajos</h4>
+                            <ul>
+                                <li><strong>Analista Financiero:</strong> Evaluación de inversiones</li>
+                                <li><strong>Banca de Inversión:</strong> Fusiones y adquisiciones</li>
+                                <li><strong>Gestor de Portafolios:</strong> Administración de fondos</li>
+                                <li><strong>Analista de Riesgos:</strong> Evaluación y mitigación de riesgos</li>
+                            </ul>
+                        </div>
+
+                        <div class="career-section">
+                            <h4>Rango Salarial</h4>
+                            <div class="salary-info">
+                                <div class="salary-box">
+                                    <strong>$60K - $90K</strong>
+                                    <span>Estados Unidos (Inicial)</span>
+                                </div>
+                                <div class="salary-box">
+                                    <strong>S/50K - S/80K</strong>
+                                    <span>Perú (Inicial)</span>
+                                </div>
                             </div>
                         </div>
-                        <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">
-                            Economistas senior en organismos internacionales o consultoras top pueden ganar significativamente más.
-                        </p>
                     </div>
                 </div>
-            </div>
 
-            <!-- Análisis de Datos Card -->
-            <div class="career-card">
-                <h3>📊 Análisis de Datos</h3>
-                
-                <div class="career-details">
-                    <div class="career-section">
-                        <h4>¿Qué es?</h4>
-                        <p>
-                            El análisis de datos es el proceso de inspeccionar, limpiar, transformar y modelar datos para 
-                            descubrir información útil, llegar a conclusiones y apoyar la toma de decisiones. Los analistas 
-                            de datos convierten datos crudos en recomendaciones accionables mediante visualizaciones, reportes y 
-                            análisis estadísticos, ayudando a las organizaciones a optimizar operaciones y estrategias.
-                        </p>
-                    </div>
-
-                    <div class="career-section">
-                        <h4>Herramientas Tecnológicas</h4>
-                        <ul>
-                            <li><strong>SQL:</strong> Extracción y manipulación de datos de bases relacionales</li>
-                            <li><strong>Python/R:</strong> Limpieza, transformación, análisis de datos, análisis estadístico y visualización</li>
-                            <li><strong>Power BI/Tableau:</strong> Visualización interactiva y dashboards empresariales</li>
-                            <li><strong>Excel Avanzado:</strong> Tablas dinámicas, funciones complejas, macros</li>
-                        </ul>
-                    </div>
-
-                    <div class="career-section">
-                        <h4>Tipos de Trabajos</h4>
-                        <ul>
-                            <li><strong>Analista de Datos:</strong> Análisis exploratorio, reportes y visualizaciones</li>
-                            <li><strong>Analista de Business Intelligence:</strong> Diseño de dashboards y KPIs</li>
-                            <li><strong>Analista de Marketing:</strong> Análisis de campañas, segmentación de clientes</li>
-                            <li><strong>Analista de Operaciones:</strong> Optimización de procesos y eficiencia</li>
-                        </ul>
-                    </div>
-
-                    <div class="career-section">
-                        <h4>Aptitudes Clave para el Éxito</h4>
-                        <ul>
-                            <li>Dominio de herramientas de análisis y visualización</li>
-                            <li>Pensamiento lógico y resolución de problemas</li>
-                            <li>Atención al detalle y precisión en el trabajo</li>
-                            <li>Capacidad de contar una historia con datos</li>
-                            <li>Conocimiento del negocio y contexto empresarial</li>
-                        </ul>
-                    </div>
-
-                    <div class="career-section">
-                        <h4>Rango Salarial</h4>
-                        <div class="salary-info">
-                            <div class="salary-box">
-                                <strong>$65K - $95K</strong>
-                                <span>Estados Unidos (Inicial)</span>
-                            </div>
-                            <div class="salary-box">
-                                <strong>S/55K - S/85K</strong>
-                                <span>Perú (Inicial)</span>
+                <!-- Economics Card with GDP Growth Chart -->
+                <div class="career-card-enhanced">
+                    <h3>Economía</h3>
+                    
+                    <!-- World Trade Flow Map Visualization -->
+                    <div class="visualization-container">
+                        <div class="world-trade-map">
+                            <svg viewBox="0 0 800 350" class="trade-svg">
+                                <!-- Simplified continents -->
+                                <ellipse cx="150" cy="120" rx="80" ry="60" class="continent north-america"/>
+                                <ellipse cx="140" cy="240" rx="50" ry="70" class="continent south-america"/>
+                                <ellipse cx="400" cy="140" rx="70" ry="50" class="continent europe"/>
+                                <ellipse cx="500" cy="240" rx="45" ry="50" class="continent africa"/>
+                                <ellipse cx="650" cy="150" rx="90" ry="80" class="continent asia"/>
+                                <ellipse cx="680" cy="280" rx="40" ry="35" class="continent oceania"/>
+                                
+                                <!-- Animated trade routes -->
+                                <path id="route1" class="trade-route" d="M 150,120 Q 250,80 400,140" stroke-dasharray="5,5"/>
+                                <path id="route2" class="trade-route" d="M 400,140 Q 525,120 650,150" stroke-dasharray="5,5"/>
+                                <path id="route3" class="trade-route" d="M 150,120 Q 400,60 650,150" stroke-dasharray="5,5"/>
+                                <path id="route4" class="trade-route" d="M 140,240 Q 300,220 500,240" stroke-dasharray="5,5"/>
+                                <path id="route5" class="trade-route" d="M 650,150 Q 665,215 680,280" stroke-dasharray="5,5"/>
+                                
+                                <!-- Animated cargo dots moving along routes -->
+                                <circle r="4" class="cargo" fill="#00bcd4">
+                                    <animateMotion dur="5s" repeatCount="indefinite">
+                                        <mpath href="#route1"/>
+                                    </animateMotion>
+                                </circle>
+                                <circle r="4" class="cargo" fill="#00bcd4">
+                                    <animateMotion dur="6s" repeatCount="indefinite" begin="1s">
+                                        <mpath href="#route2"/>
+                                    </animateMotion>
+                                </circle>
+                                <circle r="4" class="cargo" fill="#ff9800">
+                                    <animateMotion dur="7s" repeatCount="indefinite" begin="0.5s">
+                                        <mpath href="#route3"/>
+                                    </animateMotion>
+                                </circle>
+                                <circle r="4" class="cargo" fill="#4caf50">
+                                    <animateMotion dur="5.5s" repeatCount="indefinite" begin="2s">
+                                        <mpath href="#route4"/>
+                                    </animateMotion>
+                                </circle>
+                                <circle r="4" class="cargo" fill="#9c27b0">
+                                    <animateMotion dur="4s" repeatCount="indefinite" begin="1.5s">
+                                        <mpath href="#route5"/>
+                                    </animateMotion>
+                                </circle>
+                                
+                                <!-- Major trade hubs -->
+                                <g class="trade-hub-group">
+                                    <circle cx="150" cy="120" r="12" class="trade-hub major"/>
+                                    <text x="150" y="102" class="hub-label">EE.UU.</text>
+                                </g>
+                                <g class="trade-hub-group">
+                                    <circle cx="140" cy="240" r="8" class="trade-hub"/>
+                                    <text x="140" y="265" class="hub-label">Perú</text>
+                                </g>
+                                <g class="trade-hub-group">
+                                    <circle cx="400" cy="140" r="10" class="trade-hub"/>
+                                    <text x="400" y="125" class="hub-label">UE</text>
+                                </g>
+                                <g class="trade-hub-group">
+                                    <circle cx="650" cy="150" r="12" class="trade-hub major"/>
+                                    <text x="650" y="135" class="hub-label">China</text>
+                                </g>
+                                <g class="trade-hub-group">
+                                    <circle cx="680" cy="280" r="7" class="trade-hub"/>
+                                    <text x="680" y="300" class="hub-label">Australia</text>
+                                </g>
+                            </svg>
+                            
+                            <div class="trade-stats-panel">
+                                <div class="stat-card">
+                                    <span class="stat-icon">🌐</span>
+                                    <div>
+                                        <div class="stat-value">$32.6T</div>
+                                        <div class="stat-label">Comercio Global 2024</div>
+                                    </div>
+                                </div>
+                                <div class="stat-card">
+                                    <span class="stat-icon">📦</span>
+                                    <div>
+                                        <div class="stat-value">+4.2%</div>
+                                        <div class="stat-label">Crecimiento Anual</div>
+                                    </div>
+                                </div>
+                                <div class="stat-card">
+                                    <span class="stat-icon">🚢</span>
+                                    <div>
+                                        <div class="stat-value">11B</div>
+                                        <div class="stat-label">Toneladas Enviadas</div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">
-                            Campo en alta demanda. Analistas senior pueden superar $120K en EEUU y S/100K en Perú.
-                        </p>
+                    </div>
+
+                    <div class="career-details">
+                        <div class="career-section">
+                            <h4>¿Qué es?</h4>
+                            <p>
+                                La economía estudia cómo las sociedades utilizan recursos limitados para producir bienes y servicios, 
+                                y cómo los distribuyen entre diferentes grupos. Analiza el comportamiento de mercados, políticas 
+                                gubernamentales, comercio internacional y desarrollo económico.
+                            </p>
+                        </div>
+
+                        <div class="career-section">
+                            <h4>Herramientas Tecnológicas</h4>
+                            <ul>
+                                <li><strong>R:</strong> Análisis estadístico, econometría</li>
+                                <li><strong>Stata:</strong> Análisis de datos panel</li>
+                                <li><strong>Python:</strong> Machine learning aplicado a economía</li>
+                            </ul>
+                        </div>
+
+                        <div class="career-section">
+                            <h4>Rango Salarial</h4>
+                            <div class="salary-info">
+                                <div class="salary-box">
+                                    <strong>$55K - $85K</strong>
+                                    <span>Estados Unidos (Inicial)</span>
+                                </div>
+                                <div class="salary-box">
+                                    <strong>S/45K - S/75K</strong>
+                                    <span>Perú (Inicial)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Data Analytics Card with Dashboard -->
+                <div class="career-card-enhanced">
+                    <h3>Análisis de Datos</h3>
+                    
+                    <!-- Dashboard Visualization -->
+                    <div class="visualization-container">
+                        <div class="analytics-dashboard">
+                            <div class="dashboard-header">
+                                <h4>Panel de Análisis</h4>
+                                <div class="dashboard-filters">
+                                    <button class="filter-btn active">Hoy</button>
+                                    <button class="filter-btn">Semana</button>
+                                    <button class="filter-btn">Mes</button>
+                                </div>
+                            </div>
+                            <div class="dashboard-grid">
+                                <div class="kpi-card">
+                                    <span class="kpi-label">Usuarios Totales</span>
+                                    <span class="kpi-value" data-target="15420">0</span>
+                                    <span class="kpi-change positive">↑ 12.5%</span>
+                                </div>
+                                <div class="kpi-card">
+                                    <span class="kpi-label">Ingresos</span>
+                                    <span class="kpi-value">$84K</span>
+                                    <span class="kpi-change positive">↑ 8.3%</span>
+                                </div>
+                                <div class="kpi-card">
+                                    <span class="kpi-label">Conversión</span>
+                                    <span class="kpi-value">3.24%</span>
+                                    <span class="kpi-change negative">↓ 0.4%</span>
+                                </div>
+                                <div class="chart-container">
+                                    <div class="bar-chart">
+                                        <div class="bar" style="--height: 70%;" data-label="Lun"></div>
+                                        <div class="bar" style="--height: 85%;" data-label="Mar"></div>
+                                        <div class="bar" style="--height: 60%;" data-label="Mié"></div>
+                                        <div class="bar" style="--height: 90%;" data-label="Jue"></div>
+                                        <div class="bar" style="--height: 75%;" data-label="Vie"></div>
+                                    </div>
+                                </div>
+                                <div class="pie-chart-container">
+                                    <div class="pie-chart"></div>
+                                    <div class="pie-legend">
+                                        <span class="legend-item"><span class="color-box" style="background: #00bcd4;"></span> Escritorio 45%</span>
+                                        <span class="legend-item"><span class="color-box" style="background: #1a1a1a;"></span> Móvil 35%</span>
+                                        <span class="legend-item"><span class="color-box" style="background: #666;"></span> Tableta 20%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="career-details">
+                        <div class="career-section">
+                            <h4>¿Qué es?</h4>
+                            <p>
+                                El análisis de datos es el proceso de inspeccionar, limpiar, transformar y modelar datos para 
+                                descubrir información útil. Los analistas convierten datos en recomendaciones accionables 
+                                mediante visualizaciones y análisis estadísticos.
+                            </p>
+                        </div>
+
+                        <div class="career-section">
+                            <h4>Herramientas Tecnológicas</h4>
+                            <ul>
+                                <li><strong>SQL:</strong> Extracción y manipulación de datos</li>
+                                <li><strong>Python/R:</strong> Análisis y visualización</li>
+                                <li><strong>Power BI/Tableau:</strong> Dashboards empresariales</li>
+                                <li><strong>Excel Avanzado:</strong> Tablas dinámicas y macros</li>
+                            </ul>
+                        </div>
+
+                        <div class="career-section">
+                            <h4>Tipos de Trabajos</h4>
+                            <ul>
+                                <li>Analista de Datos / Data Analyst</li>
+                                <li>Analista de Business Intelligence</li>
+                                <li>Analista de Marketing Analytics</li>
+                                <li>Analista de Operaciones</li>
+                                <li>Consultor de Datos</li>
+                            </ul>
+                        </div>
+
+                        <div class="career-section">
+                            <h4>Aptitudes Clave para el Éxito</h4>
+                            <ul>
+                                <li>Pensamiento analítico y resolución de problemas</li>
+                                <li>Atención al detalle y precisión</li>
+                                <li>Comunicación efectiva de insights</li>
+                                <li>Conocimiento del negocio (domain knowledge)</li>
+                                <li>Curiosidad y capacidad de hacer las preguntas correctas</li>
+                            </ul>
+                        </div>
+
+                        <div class="career-section">
+                            <h4>Rango Salarial</h4>
+                            <div class="salary-info">
+                                <div class="salary-box">
+                                    <strong>$65K - $95K</strong>
+                                    <span>Estados Unidos (Inicial)</span>
+                                </div>
+                                <div class="salary-box">
+                                    <strong>S/55K - S/85K</strong>
+                                    <span>Perú (Inicial)</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Graduate Section -->
-        <section class="graduate">
-            <div class="university-section">
-                <div class="university-header">
-                    <h2>🎓 Maestría - Georgia Institute of Technology</h2>
-                    <p>Master of Science in Analytics - Especialización en Data Science</p>
+        <!-- Collapsible Section 2: Lo que estoy estudiando -->
+        <section class="collapsible-section">
+            <input type="checkbox" id="section2" class="section-toggle" checked>
+            <label for="section2" class="section-header">
+                <span class="toggle-icon">▼</span>
+                <h2>Lo que estoy estudiando - Maestría</h2>
+            </label>
+            
+            <div class="section-content">
+                <!-- University Card -->
+                <div class="university-card">
+                    <div class="university-logo-container">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Georgia_Tech_seal.svg" alt="Georgia Tech Logo" class="university-logo">
+                    </div>
+                    <div class="university-header">
+                        <div class="university-title">
+                            <span class="university-flag">🇺🇸</span>
+                            <h3>Georgia Institute of Technology</h3>
+                        </div>
+                        <div class="university-meta">
+                            <span class="location">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align: middle; margin-right: 4px;">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                    <circle cx="12" cy="10" r="3"/>
+                                </svg>
+                                Atlanta, GA
+                            </span>
+                            <span class="ranking">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align: middle; margin-right: 4px;">
+                                    <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/>
+                                    <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/>
+                                    <path d="M4 22h16"/>
+                                    <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/>
+                                    <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/>
+                                    <path d="M18 2H6v7a6 6 0 0 0 12 0V2z"/>
+                                </svg>
+                                #2 en Ciencia de Datos | Top 10 Computer Science EEUU
+                            </span>
+                            <span class="year">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align: middle; margin-right: 4px;">
+                                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                    <line x1="16" y1="2" x2="16" y2="6"/>
+                                    <line x1="8" y1="2" x2="8" y2="6"/>
+                                    <line x1="3" y1="10" x2="21" y2="10"/>
+                                </svg>
+                                Fundada en 1885
+                            </span>
+                        </div>
+                    </div>
+                    <p class="university-description">
+                        <strong>Master of Science in Analytics (OMSA)</strong> - Programa 100% online reconocido mundialmente. 
+                        Combina estadística, machine learning, computación y análisis de negocios.
+                    </p>
+                    <a href="https://pe.gatech.edu/degrees/analytics" target="_blank" class="external-link">
+                        Visitar programa OMSA de Georgia Tech ↗
+                    </a>
                 </div>
-            </div>
 
-            <!-- Data Science Card -->
-            <div class="career-card">
-                <h3>🤖 Ciencia de Datos</h3>
-                
-                <div class="career-details">
-                    <div class="career-section">
-                        <h4>¿Qué es?</h4>
-                        <p>
-                            La ciencia de datos es un campo interdisciplinario que utiliza métodos científicos
-                            para extraer conocimiento de datos estructurados y no estructurados. 
-                            Combina estadística, informática y machine learning para resolver problemas 
-                            complejos, hacer predicciones y automatizar decisiones. Los científicos de datos construyen modelos 
-                            predictivos, sistemas de recomendación y soluciones de inteligencia artificial.
-                        </p>
-                    </div>
-
-                    <div class="career-section">
-                        <h4>Herramientas Tecnológicas</h4>
-                        <ul>
-                            <li><strong>Python (Scikit-learn, TensorFlow, PyTorch):</strong> Machine learning y deep learning</li>
-                            <li><strong>R:</strong> Análisis estadístico avanzado y modelado predictivo</li>
-                            <li><strong>SQL / NoSQL:</strong> Gestión de bases de datos relacionales y no relacionales</li>
-                            <li><strong>Apache Spark:</strong> Procesamiento de big data distribuido</li>
-                            <li><strong>AWS / Azure / GCP:</strong> Infraestructura de computacion en la nube y MLOps</li>
-                        </ul>
-                    </div>
-
-                    <div class="career-section">
-                        <h4>Tipos de Trabajos</h4>
-                        <ul>
-                            <li><strong>Científico de Datos:</strong> Desarrollo de modelos predictivos y análisis avanzado</li>
-                            <li><strong>Machine Learning Engineer:</strong> Implementación y deployment de modelos ML</li>
-                            <li><strong>Ingeniero de Datos:</strong> Arquitectura de pipelines ETL y data warehousing</li>
-                            <li><strong>AI Researcher:</strong> Investigación en algoritmos de inteligencia artificial</li>
-                            <li><strong>MLOps Engineer:</strong> Automatización y monitoreo de sistemas ML</li>
-                            <li><strong>Data Science Consultant:</strong> Asesoría estratégica en proyectos de datos</li>
-                        </ul>
-                    </div>
-
-                    <div class="career-section">
-                        <h4>Aptitudes Clave para el Éxito</h4>
-                        <ul>
-                            <li>Fuerte base matemática (álgebra lineal, cálculo, probabilidad)</li>
-                            <li>Programación avanzada y pensamiento algorítmico</li>
-                            <li>Conocimiento profundo de machine learning y estadística</li>
-                            <li>Capacidad para trabajar con grandes volúmenes de datos</li>
-                            <li>Creatividad para resolver problemas no estructurados</li>
-                            <li>Comunicación efectiva de resultados técnicos</li>
-                            <li>Aprendizaje continuo (campo en constante evolución)</li>
-                        </ul>
-                    </div>
-
-                    <div class="career-section">
-                        <h4>Rango Salarial</h4>
-                        <div class="salary-info">
-                            <div class="salary-box">
-                                <strong>$90K - $140K</strong>
-                                <span>Estados Unidos (Inicial)</span>
+                <!-- Data Science Card with Neural Network + Code -->
+                <div class="career-card-enhanced">
+                    <h3>Ciencia de Datos</h3>
+                    
+                    <!-- Neural Network & Code Visualization -->
+                    <div class="visualization-container">
+                        <div class="ds-visualization">
+                            <div class="neural-network">
+                                <svg class="nn-svg" viewBox="0 0 400 180" xmlns="http://www.w3.org/2000/svg">
+                                    <!-- Layer 1 (Input) internal connections -->
+                                    <line x1="50" y1="40" x2="50" y2="80" class="nn-layer-connection layer-1" />
+                                    <line x1="50" y1="80" x2="50" y2="120" class="nn-layer-connection layer-1" />
+                                    <line x1="50" y1="120" x2="50" y2="160" class="nn-layer-connection layer-1" />
+                                    
+                                    <!-- Connection lines from input to first hidden layer -->
+                                    <line x1="50" y1="40" x2="150" y2="30" class="nn-connection layer-1-2" />
+                                    <line x1="50" y1="40" x2="150" y2="60" class="nn-connection layer-1-2" />
+                                    <line x1="50" y1="40" x2="150" y2="90" class="nn-connection layer-1-2" />
+                                    <line x1="50" y1="40" x2="150" y2="120" class="nn-connection layer-1-2" />
+                                    <line x1="50" y1="40" x2="150" y2="150" class="nn-connection layer-1-2" />
+                                    
+                                    <line x1="50" y1="80" x2="150" y2="30" class="nn-connection layer-1-2" />
+                                    <line x1="50" y1="80" x2="150" y2="60" class="nn-connection layer-1-2" />
+                                    <line x1="50" y1="80" x2="150" y2="90" class="nn-connection layer-1-2" />
+                                    <line x1="50" y1="80" x2="150" y2="120" class="nn-connection layer-1-2" />
+                                    <line x1="50" y1="80" x2="150" y2="150" class="nn-connection layer-1-2" />
+                                    
+                                    <line x1="50" y1="120" x2="150" y2="30" class="nn-connection layer-1-2" />
+                                    <line x1="50" y1="120" x2="150" y2="60" class="nn-connection layer-1-2" />
+                                    <line x1="50" y1="120" x2="150" y2="90" class="nn-connection layer-1-2" />
+                                    <line x1="50" y1="120" x2="150" y2="120" class="nn-connection layer-1-2" />
+                                    <line x1="50" y1="120" x2="150" y2="150" class="nn-connection layer-1-2" />
+                                    
+                                    <line x1="50" y1="160" x2="150" y2="30" class="nn-connection layer-1-2" />
+                                    <line x1="50" y1="160" x2="150" y2="60" class="nn-connection layer-1-2" />
+                                    <line x1="50" y1="160" x2="150" y2="90" class="nn-connection layer-1-2" />
+                                    <line x1="50" y1="160" x2="150" y2="120" class="nn-connection layer-1-2" />
+                                    <line x1="50" y1="160" x2="150" y2="150" class="nn-connection layer-1-2" />
+                                    
+                                    <!-- Layer 2 internal connections -->
+                                    <line x1="150" y1="30" x2="150" y2="60" class="nn-layer-connection layer-2" />
+                                    <line x1="150" y1="60" x2="150" y2="90" class="nn-layer-connection layer-2" />
+                                    <line x1="150" y1="90" x2="150" y2="120" class="nn-layer-connection layer-2" />
+                                    <line x1="150" y1="120" x2="150" y2="150" class="nn-layer-connection layer-2" />
+                                    
+                                    <!-- Connections from first hidden to second hidden layer -->
+                                    <line x1="150" y1="30" x2="250" y2="50" class="nn-connection layer-2-3" />
+                                    <line x1="150" y1="30" x2="250" y2="80" class="nn-connection layer-2-3" />
+                                    <line x1="150" y1="30" x2="250" y2="110" class="nn-connection layer-2-3" />
+                                    <line x1="150" y1="30" x2="250" y2="140" class="nn-connection layer-2-3" />
+                                    
+                                    <line x1="150" y1="60" x2="250" y2="50" class="nn-connection layer-2-3" />
+                                    <line x1="150" y1="60" x2="250" y2="80" class="nn-connection layer-2-3" />
+                                    <line x1="150" y1="60" x2="250" y2="110" class="nn-connection layer-2-3" />
+                                    <line x1="150" y1="60" x2="250" y2="140" class="nn-connection layer-2-3" />
+                                    
+                                    <line x1="150" y1="90" x2="250" y2="50" class="nn-connection layer-2-3" />
+                                    <line x1="150" y1="90" x2="250" y2="80" class="nn-connection layer-2-3" />
+                                    <line x1="150" y1="90" x2="250" y2="110" class="nn-connection layer-2-3" />
+                                    <line x1="150" y1="90" x2="250" y2="140" class="nn-connection layer-2-3" />
+                                    
+                                    <line x1="150" y1="120" x2="250" y2="50" class="nn-connection layer-2-3" />
+                                    <line x1="150" y1="120" x2="250" y2="80" class="nn-connection layer-2-3" />
+                                    <line x1="150" y1="120" x2="250" y2="110" class="nn-connection layer-2-3" />
+                                    <line x1="150" y1="120" x2="250" y2="140" class="nn-connection layer-2-3" />
+                                    
+                                    <line x1="150" y1="150" x2="250" y2="50" class="nn-connection layer-2-3" />
+                                    <line x1="150" y1="150" x2="250" y2="80" class="nn-connection layer-2-3" />
+                                    <line x1="150" y1="150" x2="250" y2="110" class="nn-connection layer-2-3" />
+                                    <line x1="150" y1="150" x2="250" y2="140" class="nn-connection layer-2-3" />
+                                    
+                                    <!-- Layer 3 internal connections -->
+                                    <line x1="250" y1="50" x2="250" y2="80" class="nn-layer-connection layer-3" />
+                                    <line x1="250" y1="80" x2="250" y2="110" class="nn-layer-connection layer-3" />
+                                    <line x1="250" y1="110" x2="250" y2="140" class="nn-layer-connection layer-3" />
+                                    
+                                    <!-- Connections from second hidden to output layer -->
+                                    <line x1="250" y1="50" x2="350" y2="80" class="nn-connection layer-3-4" />
+                                    <line x1="250" y1="50" x2="350" y2="120" class="nn-connection layer-3-4" />
+                                    <line x1="250" y1="80" x2="350" y2="80" class="nn-connection layer-3-4" />
+                                    <line x1="250" y1="80" x2="350" y2="120" class="nn-connection layer-3-4" />
+                                    <line x1="250" y1="110" x2="350" y2="80" class="nn-connection layer-3-4" />
+                                    <line x1="250" y1="110" x2="350" y2="120" class="nn-connection layer-3-4" />
+                                    <line x1="250" y1="140" x2="350" y2="80" class="nn-connection layer-3-4" />
+                                    <line x1="250" y1="140" x2="350" y2="120" class="nn-connection layer-3-4" />
+                                    
+                                    <!-- Layer 4 internal connection -->
+                                    <line x1="350" y1="80" x2="350" y2="120" class="nn-layer-connection layer-4" />
+                                    
+                                    <!-- All nodes in uniform blue -->
+                                    <circle cx="50" cy="40" r="8" class="nn-node layer-1" />
+                                    <circle cx="50" cy="80" r="8" class="nn-node layer-1" />
+                                    <circle cx="50" cy="120" r="8" class="nn-node layer-1" />
+                                    <circle cx="50" cy="160" r="8" class="nn-node layer-1" />
+                                    
+                                    <circle cx="150" cy="30" r="8" class="nn-node layer-2" />
+                                    <circle cx="150" cy="60" r="8" class="nn-node layer-2" />
+                                    <circle cx="150" cy="90" r="8" class="nn-node layer-2" />
+                                    <circle cx="150" cy="120" r="8" class="nn-node layer-2" />
+                                    <circle cx="150" cy="150" r="8" class="nn-node layer-2" />
+                                    
+                                    <circle cx="250" cy="50" r="8" class="nn-node layer-3" />
+                                    <circle cx="250" cy="80" r="8" class="nn-node layer-3" />
+                                    <circle cx="250" cy="110" r="8" class="nn-node layer-3" />
+                                    <circle cx="250" cy="140" r="8" class="nn-node layer-3" />
+                                    
+                                    <circle cx="350" cy="80" r="8" class="nn-node layer-4" />
+                                    <circle cx="350" cy="120" r="8" class="nn-node layer-4" />
+                                </svg>
                             </div>
-                            <div class="salary-box">
-                                <strong>S/80K - S/120K</strong>
-                                <span>Perú (Inicial)</span>
+                            <div class="code-editor">
+                                <div class="editor-header">
+                                    <span class="editor-title">model.py</span>
+                                    <div class="editor-dots">
+                                        <span></span><span></span><span></span>
+                                    </div>
+                                </div>
+                                <div class="editor-content">
+                                    <code><span class="keyword">import</span> tensorflow <span class="keyword">as</span> tf
+<span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> train_test_split
+
+<span class="comment"># Build neural network</span>
+model = tf.keras.Sequential([
+    tf.keras.layers.Dense(<span class="number">128</span>, activation=<span class="string">'relu'</span>),
+    tf.keras.layers.Dropout(<span class="number">0.2</span>),
+    tf.keras.layers.Dense(<span class="number">64</span>, activation=<span class="string">'relu'</span>),
+    tf.keras.layers.Dense(<span class="number">10</span>, activation=<span class="string">'softmax'</span>)
+])
+
+<span class="comment"># Train model</span>
+model.compile(optimizer=<span class="string">'adam'</span>, loss=<span class="string">'sparse_categorical_crossentropy'</span>)
+model.fit(X_train, y_train, epochs=<span class="number">10</span>)
+
+<span class="terminal-output">Epoch 10/10 - loss: 0.0234 - accuracy: 0.9891 ✓</span></code>
+                                </div>
                             </div>
                         </div>
-                        <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">
-                            Una de las profesiones mejor pagadas en tecnología. Senior Data Scientists y ML Engineers pueden 
-                            superar $200K+ en EEUU (especialmente en empresas FAANG) y S/150K+ en Perú.
-                        </p>
+                    </div>
+
+                    <div class="career-details">
+                        <div class="career-section">
+                            <h4>¿Qué es?</h4>
+                            <p>
+                                La ciencia de datos utiliza métodos científicos para extraer conocimiento de datos. 
+                                Combina estadística, informática y machine learning para resolver problemas complejos 
+                                y construir modelos predictivos e inteligencia artificial.
+                            </p>
+                        </div>
+
+                        <div class="career-section">
+                            <h4>Herramientas Tecnológicas</h4>
+                            <ul>
+                                <li><strong>Python (Scikit-learn, TensorFlow, PyTorch):</strong> ML y deep learning</li>
+                                <li><strong>R:</strong> Análisis estadístico avanzado</li>
+                                <li><strong>SQL / NoSQL:</strong> Bases de datos</li>
+                                <li><strong>Apache Spark:</strong> Big data distribuido</li>
+                                <li><strong>AWS / Azure / GCP:</strong> Cloud y MLOps</li>
+                            </ul>
+                        </div>
+
+                        <div class="career-section">
+                            <h4>Tipos de Trabajos</h4>
+                            <ul>
+                                <li><strong>Científico de Datos:</strong> Desarrollo de modelos predictivos y análisis avanzado</li>
+                                <li><strong>Machine Learning Engineer:</strong> Implementación y deployment de modelos ML</li>
+                                <li><strong>Ingeniero de Datos:</strong> Arquitectura de pipelines ETL y data warehousing</li>
+                                <li><strong>AI Researcher:</strong> Investigación en algoritmos de inteligencia artificial</li>
+                                <li><strong>MLOps Engineer:</strong> Automatización y monitoreo de sistemas ML</li>
+                                <li><strong>Data Science Consultant:</strong> Asesoría estratégica en proyectos de datos</li>
+                            </ul>
+                        </div>
+
+                        <div class="career-section">
+                            <h4>Aptitudes Clave para el Éxito</h4>
+                            <ul>
+                                <li>Fuerte base matemática (álgebra lineal, cálculo, probabilidad)</li>
+                                <li>Programación avanzada y pensamiento algorítmico</li>
+                                <li>Conocimiento profundo de machine learning y estadística</li>
+                                <li>Capacidad para trabajar con grandes volúmenes de datos</li>
+                                <li>Creatividad para resolver problemas no estructurados</li>
+                                <li>Comunicación efectiva de resultados técnicos</li>
+                                <li>Aprendizaje continuo (campo en constante evolución)</li>
+                            </ul>
+                        </div>
+
+                        <div class="career-section">
+                            <h4>Rango Salarial</h4>
+                            <div class="salary-info">
+                                <div class="salary-box">
+                                    <strong>$90K - $140K</strong>
+                                    <span>Estados Unidos (Inicial)</span>
+                                </div>
+                                <div class="salary-box">
+                                    <strong>S/80K - S/120K</strong>
+                                    <span>Perú (Inicial)</span>
+                                </div>
+                            </div>
+                            <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">
+                                Una de las profesiones mejor pagadas en tecnología. Senior Data Scientists pueden 
+                                superar $200K+ en EEUU y S/150K+ en Perú.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
+
+        <!-- Collapsible Section 3: Lo que quiero estudiar -->
+        <section class="collapsible-section">
+            <input type="checkbox" id="section3" class="section-toggle" checked>
+            <label for="section3" class="section-header">
+                <span class="toggle-icon">▼</span>
+                <h2>Lo que quiero estudiar - Futuro Académico</h2>
+            </label>
+            
+            <div class="section-content">
+                <div class="future-intro">
+                    <p>
+                        Mi visión académica a largo plazo combina ciencia de datos con educación y neurociencia, 
+                        preparándome para liderar instituciones educativas innovadoras y contribuir a la investigación 
+                        sobre tecnología educativa y su impacto social.
+                    </p>
+                </div>
+
+                <!-- Second Master's Research -->
+                <div class="subsection">
+                    <h3 class="subsection-title">Segunda Maestría en Tecnología Educativa</h3>
+                    
+                    <!-- NTU Program -->
+                    <div class="program-card">
+                        <div class="program-header">
+                            <div class="program-title">
+                                <span class="university-flag">🇸🇬</span>
+                                <h4>Nanyang Technological University (NTU)</h4>
+                            </div>
+                            <div class="program-badges">
+                                <span class="badge rank">Ranking Mundial #15</span>
+                                <span class="badge specialty">Lider en Tecnología Educativa en Asia</span>
+                            </div>
+                        </div>
+                        
+                        <h5>Master of Education (Learning Sciences and Technologies)</h5>
+                        <h5>Maestria en Educacion (Ciencas del Aprendizaje y Tecnologia)</h5>
+                        <p class="program-location">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align: middle; margin-right: 4px;">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                            Singapur | 
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align: middle; margin-right: 4px;">
+                                <path d="M3 21h18"/>
+                                <path d="M3 7v1a3 3 0 0 0 6 0V7m0 1a3 3 0 0 0 6 0V7m0 1a3 3 0 0 0 6 0V7"/>
+                                <path d="M3 7h18v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7z"/>
+                                <path d="M9 3h6v4H9z"/>
+                            </svg>
+                            Instituto Nacional de Educación
+                        </p>
+                        
+                        <div class="program-section">
+                            <h6>Cursos Destacados:</h6>
+                            <ul class="highlight-courses">
+                                <li>
+                                    <strong>MLT917:</strong> Artificial Intelligence for Education: A Pedagogical Spectrum
+                                    <span class="course-note">- Sistemas de Inteligencia Artificial en Educacion y pedagogías modernas</span>
+                                </li>
+                                <li>
+                                    <strong>MLT916:</strong> Learning Analytics for Educational Practitioners
+                                    <span class="course-note">- Análisis de datos educativos para mejorar aprendizaje</span>
+                                </li>
+                                <li>
+                                    <strong>MLT907:</strong> Neuroscience, Technology and Learning
+                                    <span class="course-note">- Neurociencia aplicada a tecnología educativa</span>
+                                </li>
+                                <li>
+                                    <strong>MLT914:</strong> Educational Design Research
+                                    <span class="course-note">- Metodologías de investigación en educación</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="program-section">
+                            <h6>¿Por qué este programa?</h6>
+                            <p>
+                                Este programa me permitirá fusionar mi experiencia en ciencia de datos con pedagogía 
+                                basada en evidencia. Como administrador de Santa Maria de los Andes, podré implementar 
+                                sistemas de aprendizaje personalizado usando AI, transformando la educación mediante 
+                                learning analytics y preparándome para investigación doctoral en EdTech.
+                            </p>
+                        </div>
+
+                        <div class="program-section">
+                            <h6>Impacto en mis metas a 10 años:</h6>
+                            <ul class="impact-list">
+                                <li>✓ Liderar la transformación digital del colegio con metodologías científicas</li>
+                                <li>✓ Desarrollar curriculum de Ciencia de Datos para secundaria basado en neurociencia</li>
+                                <li>✓ Preparación para PhD en Ciencia de Datos Educativos</li>
+                                <li>✓ Publicar investigación sobre Inteligencia Artificial en Educacion en Latinoamerica</li>
+                            </ul>
+                        </div>
+
+                        <a href="https://www.ntu.edu.sg/nie/admissions/graduate-education/graduate-programmes/detail/master-of-education-(learning-sciences-and-technologies)" target="_blank" class="external-link">
+                            Ver programa completo en NTU ↗
+                        </a>
+                    </div>
+
+                    <!-- HKU Program -->
+                    <div class="program-card">
+                        <div class="program-header">
+                            <div class="program-title">
+                                <span class="university-flag">🇭🇰</span>
+                                <h4>University of Hong Kong (HKU)</h4>
+                            </div>
+                            <div class="program-badges">
+                                <span class="badge rank">Ranking #2 en Asia</span>
+                                <span class="badge specialty">Diseño y Innovacion en Educacion</span>
+                            </div>
+                        </div>
+                        
+                        <h5>Maestria en Educacion (Tecnologia y Diseño para Aprendizaje y Enseñanza)</h5>
+                        <p class="program-location">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align: middle; margin-right: 4px;">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                            Hong Kong | 
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align: middle; margin-right: 4px;">
+                                <path d="M3 21h18"/>
+                                <path d="M3 7v1a3 3 0 0 0 6 0V7m0 1a3 3 0 0 0 6 0V7m0 1a3 3 0 0 0 6 0V7"/>
+                                <path d="M3 7h18v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7z"/>
+                                <path d="M9 3h6v4H9z"/>
+                            </svg>
+                            Facultad de Educacion
+                        </p>
+                        
+                        <div class="program-section">
+                            <h6>Áreas de Enfoque:</h6>
+                            <ul class="highlight-courses">
+                                <li>Diseño de Pensamiento para Tecnología Educativa</li>
+                                <li>Blended Learning Design y Clases Invertidas</li>
+                                <li>Gamificación y Involucramiento Estudiantil</li>
+                                <li>Metodologías de Investigación en Innovación Educativa</li>
+                            </ul>
+                        </div>
+
+                        <div class="program-section">
+                            <h6>¿Por qué este programa?</h6>
+                            <p>
+                                HKU ofrece un enfoque complementario centrado en diseño y experiencia de usuario. 
+                                Mientras NTU me da el rigor científico en datos y AI, HKU me prepara para diseñar 
+                                experiencias educativas innovadoras que realmente funcionen en el aula.
+                            </p>
+                        </div>
+
+                        <div class="program-section">
+                            <h6>Conexión con mi carrera:</h6>
+                            <ul class="impact-list">
+                                <li>✓ Combinar data science con expertise en diseño pedagógico</li>
+                                <li>✓ Esencial para rol como profesor universitario (teoría + práctica)</li>
+                                <li>✓ Desarrollar metodologías propias de enseñanza basadas en tecnología</li>
+                                <li>✓ Network internacional en comunidad EdTech de Asia-Pacífico</li>
+                            </ul>
+                        </div>
+
+                        <a href="https://web.edu.hku.hk/programme/tdll" target="_blank" class="external-link">
+                            Ver programa completo en HKU ↗
+                        </a>
+                    </div>
+                </div>
+
+                <!-- PhD Vision -->
+                <div class="subsection phd-vision">
+                    <h3 class="subsection-title">Visión de Doctorado (PhD)</h3>
+                    
+                    <div class="phd-intro">
+                        <p>
+                            Mi investigación doctoral se centrará en la intersección de <strong>Ciencia de Datos, 
+                            Educación y Desarrollo Económico</strong>. Busco contribuir al conocimiento sobre cómo 
+                            la tecnología educativa puede transformar sociedades, especialmente en contextos de 
+                            recursos limitados como Latinoamérica.
+                        </p>
+                    </div>
+
+                    <div class="target-institutions">
+                        <h4>Instituciones Objetivo</h4>
+                        <div class="institutions-grid">
+                            <div class="institution-item mit">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/0/0c/MIT_logo.svg" alt="MIT Logo" class="univ-logo-img">
+                                <span class="name">MIT</span>
+                                <span class="dept">Media Lab / Education</span>
+                                <div class="courses-preview">
+                                    <span class="course-tag">Diseño de Tecnologías de Aprendizaje</span>
+                                    <span class="course-tag">IA y Aprendizaje Personalizado</span>
+                                </div>
+                            </div>
+                            <div class="institution-item stanford">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/Seal_of_Leland_Stanford_Junior_University.svg" alt="Stanford Logo" class="univ-logo-img">
+                                <span class="name">Stanford</span>
+                                <span class="dept">Graduate School of Education</span>
+                                <div class="courses-preview">
+                                    <span class="course-tag">Análisis de Datos Educativos</span>
+                                    <span class="course-tag">Diseño de Experiencias de Aprendizaje</span>
+                                </div>
+                            </div>
+                            <div class="institution-item princeton">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/d/d0/Princeton_seal.svg" alt="Princeton Logo" class="univ-logo-img">
+                                <span class="name">Princeton</span>
+                                <span class="dept">Economics & Public Policy</span>
+                                <div class="courses-preview">
+                                    <span class="course-tag">Economía del Desarrollo</span>
+                                    <span class="course-tag">Evaluación de Impacto en Educación</span>
+                                </div>
+                            </div>
+                            <div class="institution-item oxford">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/f/ff/Oxford-University-Circlet.svg" alt="Oxford Logo" class="univ-logo-img">
+                                <span class="name">Oxford</span>
+                                <span class="dept">Department of Education</span>
+                                <div class="courses-preview">
+                                    <span class="course-tag">Neurociencia Cognitiva y Educación</span>
+                                    <span class="course-tag">Tecnología Educativa Comparada</span>
+                                </div>
+                            </div>
+                            <div class="institution-item cambridge">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/8/8c/University_of_Cambridge_logo.svg" alt="Cambridge Logo" class="univ-logo-img">
+                                <span class="name">Cambridge</span>
+                                <span class="dept">Faculty of Education</span>
+                                <div class="courses-preview">
+                                    <span class="course-tag">Psicología del Aprendizaje</span>
+                                    <span class="course-tag">Innovación en Pedagogía Digital</span>
+                                </div>
+                            </div>
+                            <div class="institution-item nus">
+                                <img src="https://upload.wikimedia.org/wikipedia/en/b/b9/NUS_coat_of_arms.svg" alt="NUS Logo" class="univ-logo-img">
+                                <span class="name">NUS</span>
+                                <span class="dept">Learning Sciences</span>
+                                <div class="courses-preview">
+                                    <span class="course-tag">Analytics de Aprendizaje Avanzado</span>
+                                    <span class="course-tag">Sistemas Adaptativos de Enseñanza</span>
+                                </div>
+                            </div>
+                            <div class="institution-item tsinghua">
+                                <img src="https://upload.wikimedia.org/wikipedia/en/e/e8/Tsinghua_University_Logo.svg" alt="Tsinghua Logo" class="univ-logo-img">
+                                <span class="name">Tsinghua</span>
+                                <span class="dept">Educational Technology</span>
+                                <div class="courses-preview">
+                                    <span class="course-tag">IA en Educación K-12</span>
+                                    <span class="course-tag">Plataformas de Aprendizaje a Escala</span>
+                                </div>
+                            </div>
+                            <div class="institution-item cmu">
+                                <img src="https://upload.wikimedia.org/wikipedia/en/b/bb/Carnegie_Mellon_University_seal.svg" alt="Carnegie Mellon Logo" class="univ-logo-img">
+                                <span class="name">Carnegie Mellon</span>
+                                <span class="dept">Human-Computer Interaction</span>
+                                <div class="courses-preview">
+                                    <span class="course-tag">Diseño de Interacción Educativa</span>
+                                    <span class="course-tag">Tecnologías de Aprendizaje Colaborativo</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="research-interests">
+                        <h4>Áreas de Investigación</h4>
+                        
+                        <div class="research-area">
+                            <h5>Ciencia de Datos Educativos & Analisis de Datos Educativos</h5>
+                            <p>
+                                Desarrollar algoritmos de machine learning que personalicen la educación a escala. 
+                                ¿Cómo podemos usar datos de estudiantes para adaptar contenido, ritmo y metodología 
+                                de forma automática y efectiva?
+                            </p>
+                            <div class="research-keywords">
+                                <span class="keyword">Adaptive Learning</span>
+                                <span class="keyword">Personalization</span>
+                                <span class="keyword">Student Modeling</span>
+                            </div>
+                        </div>
+
+                        <div class="research-area">
+                            <h5>Inteligencia Artificial Personalizada en Aprendizaje a Escala</h5>
+                            <p>
+                                Sistemas de inteligencia artificial que funcionen como tutores personalizados. 
+                                Investigación sobre cómo hacer que estos sistemas sean accesibles y efectivos 
+                                en contextos de bajos recursos.
+                            </p>
+                            <div class="research-keywords">
+                                <span class="keyword">AI Tutoring</span>
+                                <span class="keyword">NLP in Education</span>
+                                <span class="keyword">Scalable EdTech</span>
+                            </div>
+                        </div>
+
+                        <div class="research-area">
+                            <h5>Analisis de Rendimiento Deportivo usando Inteligencia Artificial</h5>
+                            <p>
+                                Aplicar técnicas de computer vision y deep learning para analizar rendimiento 
+                                deportivo. Sistemas de feedback automático para entrenadores y atletas.
+                            </p>
+                            <div class="research-keywords">
+                                <span class="keyword">Computer Vision</span>
+                                <span class="keyword">Biomechanics</span>
+                                <span class="keyword">Performance Optimization</span>
+                            </div>
+                        </div>
+
+                        <div class="research-area">
+                            <h5>Impacto de la Tecnologia Educativa en el Desarrollo Economico</h5>
+                            <p>
+                                <strong>Caso Perú:</strong> Investigación cuantitativa sobre el impacto económico 
+                                de implementar tecnología educativa en países en desarrollo. ¿Cómo medir el ROI 
+                                social de inversiones en EdTech?
+                            </p>
+                            <div class="research-keywords">
+                                <span class="keyword">Development Economics</span>
+                                <span class="keyword">Policy Impact</span>
+                                <span class="keyword">Latin America</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <!-- Footer -->
@@ -327,4 +1023,3 @@
     </footer>
 </body>
 </html>
-

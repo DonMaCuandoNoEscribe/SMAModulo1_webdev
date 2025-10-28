@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>José Pérez - Portfolio Profesional</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="plan-1ano-professional.css">
 </head>
 <body>
     <!-- Header & Navigation -->
@@ -24,19 +25,19 @@
     <!-- Main Content -->
     <main>
         <!-- Hero Section -->
-        <section class="hero">
+        <section class="hero-professional">
             <div class="container">
-                <h1>Jose Pérez</h1>
-                <p> <span class="accent-text">Ciencia de Datos</span> | <span class="accent-text">Emprendedor</span> | <span class="accent-text">Educador</span></p>
-                <p>Definiendo mi propio camino atraves de la tecnología, educacion, y deporte</p>
+                <h1 class="hero-title">Jose Pérez</h1>
+                <p class="hero-subtitle"><span class="accent-text">Ciencia de Datos</span> | <span class="accent-text">Emprendedor</span> | <span class="accent-text">Educador</span></p>
+                <p class="hero-subtitle">Definiendo mi propio camino atraves de la tecnología, educacion, y deporte</p>
             </div>
         </section>
 
         <!-- Introduction Section -->
         <section class="introduction">
-            <h2 class="section-title">¿Quién Soy Yo?</h2>
+            <h2 class="section-title-professional">¿Quién Soy Yo?</h2>
             <div class="container">
-                <p style="text-align: center; max-width: 800px; margin: 0 auto; font-size: 1.2rem;">
+                <p class="section-intro-professional" style="text-align: center; max-width: 800px; margin: 0 auto;">
                     Soy un profesional multifacético con una pasión profunda por el aprendizaje continuo y la innovación. 
                     Actualmente me encuentro cursando una maestría en Ciencia de Datos mientras desarrollo mi carrera 
                     como emprendedor y educador.
@@ -46,49 +47,89 @@
 
         <!-- Interests Section -->
         <section class="interests">
-            <h2 class="section-title">Mis Intereses</h2>
+            <h2 class="section-title-professional">Mis Intereses</h2>
             <div class="cards-grid">
-                <div class="card">
-                    <span class="card-icon">📊</span>
-                    <h3>Ciencia de Datos y Estadística</h3>
-                    <p>
+                <div class="card-professional">
+                    <div class="card-header-professional">
+                        <div class="icon-circle-professional">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="18" y1="20" x2="18" y2="10"/>
+                                <line x1="12" y1="20" x2="12" y2="4"/>
+                                <line x1="6" y1="20" x2="6" y2="14"/>
+                            </svg>
+                        </div>
+                        <h3 class="card-title-professional">Ciencia de Datos y Estadística</h3>
+                    </div>
+                    <p class="card-description-professional">
                         Me fascina descubrir patrones en los datos y utilizar la estadística para tomar decisiones 
                         informadas. La combinación de matemáticas, programación y pensamiento analítico me permite 
                         resolver problemas complejos de manera creativa.
                     </p>
                 </div>
 
-                <div class="card">
-                    <span class="card-icon">💼</span>
-                    <h3>Emprendimiento</h3>
-                    <p>
+                <div class="card-professional">
+                    <div class="card-header-professional">
+                        <div class="icon-circle-professional">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
+                                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+                            </svg>
+                        </div>
+                        <h3 class="card-title-professional">Emprendimiento</h3>
+                    </div>
+                    <p class="card-description-professional">
                         Desarrollo soluciones innovadoras a través de mi consultoría de digitalización, ayudando a 
                         empresas a optimizar sus procesos mediante ETL, Analytics y Machine Learning. El emprendimiento 
                         me permite crear impacto tangible en organizaciones.
                     </p>
                 </div>
 
-                <div class="card">
-                    <span class="card-icon">🏐</span>
-                    <h3>Volleyball</h3>
-                    <p>
+                <div class="card-professional">
+                    <div class="card-header-professional">
+                        <div class="icon-circle-professional">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <line x1="12" y1="8" x2="12" y2="16"/>
+                                <line x1="8" y1="12" x2="16" y2="12"/>
+                            </svg>
+                        </div>
+                        <h3 class="card-title-professional">Volleyball</h3>
+                    </div>
+                    <p class="card-description-professional">
                         Como jugador y entrenador, el volleyball me ha enseñado sobre trabajo en equipo, liderazgo, 
                         perseverancia y la importancia de pensar estrategicamente.
                     </p>
                 </div>
 
-                <div class="card">
-                    <span class="card-icon">🎵</span>
-                    <h3>Música y Enseñanza</h3>
-                    <p>
+                <div class="card-professional">
+                    <div class="card-header-professional">
+                        <div class="icon-circle-professional">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 18V5l12-2v13"/>
+                                <circle cx="6" cy="18" r="3"/>
+                                <circle cx="18" cy="16" r="3"/>
+                            </svg>
+                        </div>
+                        <h3 class="card-title-professional">Música</h3>
+                    </div>
+                    <p class="card-description-professional">
                         La música es mi forma de expresión creativa. Escribo, produzco y estoy en processo de publicar mi primer 
                         álbum conceptual.
                     </p>
                 </div>
-                <div class="card">
-                    <span class="card-icon">🎵</span>
-                    <h3>Enseñanza</h3>
-                    <p>
+                <div class="card-professional">
+                    <div class="card-header-professional">
+                        <div class="icon-circle-professional">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M3 21h18"/>
+                                <path d="M3 7v1a3 3 0 0 0 6 0V7m0 1a3 3 0 0 0 6 0V7m0 1a3 3 0 0 0 6 0V7"/>
+                                <path d="M3 7h18v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7z"/>
+                                <path d="M9 3h6v4H9z"/>
+                            </svg>
+                        </div>
+                        <h3 class="card-title-professional">Enseñanza</h3>
+                    </div>
+                    <p class="card-description-professional">
                         La educacion ha sido una aspiracion mia desde que soy pequeño, actualmente enseño computacion y estadistica basica en un colegio privado,
                         y una vez terminada mi maestria, quiero enseñar en universidades de prestigio.
                     </p>
@@ -98,11 +139,15 @@
 
         <!-- Strengths Section -->
         <section class="strengths">
-            <h2 class="section-title">Mis Fortalezas</h2>
+            <h2 class="section-title-professional">Mis Fortalezas</h2>
             <div class="container">
                 <ul class="goals-list">
                     <li class="goal-item">
-                        <span class="goal-icon">⚡</span>
+                        <div class="icon-circle-professional" style="margin-right: 1rem;">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+                            </svg>
+                        </div>
                         <div class="goal-content">
                             <h4>Adaptabilidad y Dedicaion</h4>
                             <p>
@@ -113,7 +158,13 @@
                     </li>
 
                     <li class="goal-item">
-                        <span class="goal-icon">🔢</span>
+                        <div class="icon-circle-professional" style="margin-right: 1rem;">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                                <line x1="3" y1="9" x2="21" y2="9"/>
+                                <line x1="9" y1="21" x2="9" y2="9"/>
+                            </svg>
+                        </div>
                         <div class="goal-content">
                             <h4>Habilidad Matemática</h4>
                             <p>
@@ -125,7 +176,11 @@
                     </li>
 
                     <li class="goal-item">
-                        <span class="goal-icon">✍️</span>
+                        <div class="icon-circle-professional" style="margin-right: 1rem;">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"/>
+                            </svg>
+                        </div>
                         <div class="goal-content">
                             <h4>Comunicación Escrita</h4>
                             <p>
@@ -137,7 +192,13 @@
                     </li>
 
                     <li class="goal-item">
-                        <span class="goal-icon">🎯</span>
+                        <div class="icon-circle-professional" style="margin-right: 1rem;">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <polyline points="16 12 12 8 8 12"/>
+                                <line x1="12" y1="16" x2="12" y2="8"/>
+                            </svg>
+                        </div>
                         <div class="goal-content">
                             <h4>Ambicion</h4>
                             <p>
@@ -153,9 +214,9 @@
 
         <!-- Vision Section -->
         <section class="vision">
-            <div class="info-box">
-                <h3 class="text-center">Mi Visión de Futuro</h3>
-                <p style="text-align: center; font-size: 1.1rem;">
+            <div class="info-box-professional">
+                <h3 class="text-center" style="color: #0f172a; margin-bottom: 1rem;">Mi Visión de Futuro</h3>
+                <p style="text-align: center; font-size: 1.1rem; color: #334155; line-height: 1.7;">
                     Me proyecto como un profesional que une la excelencia académica con el impacto social. A través de mi 
                     trabajo en consultoría, educación y emprendimiento, busco crear un legado que inspire a 
                     futuras generaciones a perseguir sus pasiones con determinación y propósito.
