@@ -28,277 +28,17 @@
         </nav>
     </header>
 
-    <main>
+    <main class="grid">
         <!-- Hero Section -->
-        <section class="hero">
+        <section class="hero panel">
             <div class="hero-content">
                 <h2 class="hero-title">El juego detrás del juego: datos, rotaciones y decisiones</h2>
                 <p class="hero-subtitle">La táctica se ve; los patrones se descubren</p>
-                <p><a class="cta-button" href="analytics-questions.html">Explora las preguntas clave →</a></p>
-                
-                <!-- Rotation Controls for Hero -->
-                <div class="hero-rotation-controls">
-                    <input type="radio" id="hero-rotation-1" name="hero-rotation" value="1" checked>
-                    <input type="radio" id="hero-rotation-2" name="hero-rotation" value="2">
-                    <input type="radio" id="hero-rotation-3" name="hero-rotation" value="3">
-                    <input type="radio" id="hero-rotation-4" name="hero-rotation" value="4">
-                    <input type="radio" id="hero-rotation-5" name="hero-rotation" value="5">
-                    <input type="radio" id="hero-rotation-6" name="hero-rotation" value="6">
-                </div>
-                
-                <div class="hero-visual">
-                    <svg id="volleyball-court" width="600" height="400" viewBox="0 0 600 400">
-                        <!-- Court outline -->
-                        <rect x="50" y="50" width="500" height="300" fill="none" stroke="#2c3e50" stroke-width="3"/>
-                        <!-- Center line -->
-                        <line x1="300" y1="50" x2="300" y2="350" stroke="#2c3e50" stroke-width="2"/>
-                        <!-- Attack line -->
-                        <line x1="50" y1="200" x2="300" y2="200" stroke="#2c3e50" stroke-width="2"/>
-                        <line x1="300" y1="200" x2="550" y2="200" stroke="#2c3e50" stroke-width="2"/>
-                        
-                        <!-- Zones -->
-                        <g id="zones">
-                            <!-- Zone 1 -->
-                            <rect x="50" y="50" width="83" height="75" fill="rgba(52, 152, 219, 0.1)" stroke="#3498db" stroke-width="1"/>
-                            <text x="91.5" y="90" text-anchor="middle" class="zone-number">1</text>
-                            
-                            <!-- Zone 2 -->
-                            <rect x="133" y="50" width="83" height="75" fill="rgba(52, 152, 219, 0.1)" stroke="#3498db" stroke-width="1"/>
-                            <text x="174.5" y="90" text-anchor="middle" class="zone-number">2</text>
-                            
-                            <!-- Zone 3 -->
-                            <rect x="216" y="50" width="84" height="75" fill="rgba(52, 152, 219, 0.1)" stroke="#3498db" stroke-width="1"/>
-                            <text x="258" y="90" text-anchor="middle" class="zone-number">3</text>
-                            
-                            <!-- Zone 4 -->
-                            <rect x="300" y="50" width="83" height="75" fill="rgba(52, 152, 219, 0.1)" stroke="#3498db" stroke-width="1"/>
-                            <text x="341.5" y="90" text-anchor="middle" class="zone-number">4</text>
-                            
-                            <!-- Zone 5 -->
-                            <rect x="383" y="50" width="83" height="75" fill="rgba(52, 152, 219, 0.1)" stroke="#3498db" stroke-width="1"/>
-                            <text x="424.5" y="90" text-anchor="middle" class="zone-number">5</text>
-                            
-                            <!-- Zone 6 -->
-                            <rect x="466" y="50" width="84" height="75" fill="rgba(52, 152, 219, 0.1)" stroke="#3498db" stroke-width="1"/>
-                            <text x="508" y="90" text-anchor="middle" class="zone-number">6</text>
-                        </g>
-                        
-                        <!-- Players -->
-                        <g id="players">
-                            <!-- Rotation 1 Players -->
-                            <g class="rotation-players hero-rotation-1-players">
-                                <circle cx="91.5" cy="87.5" r="8" fill="#e74c3c" stroke="#c0392b" stroke-width="2"/>
-                                <text x="91.5" y="92" text-anchor="middle" class="player-number">1</text>
-                                <circle cx="174.5" cy="87.5" r="8" fill="#3498db" stroke="#2980b9" stroke-width="2"/>
-                                <text x="174.5" y="92" text-anchor="middle" class="player-number">2</text>
-                                <circle cx="258" cy="87.5" r="8" fill="#f39c12" stroke="#e67e22" stroke-width="2"/>
-                                <text x="258" y="92" text-anchor="middle" class="player-number">3</text>
-                                <circle cx="341.5" cy="87.5" r="8" fill="#27ae60" stroke="#229954" stroke-width="2"/>
-                                <text x="341.5" y="92" text-anchor="middle" class="player-number">4</text>
-                                <circle cx="424.5" cy="87.5" r="8" fill="#9b59b6" stroke="#8e44ad" stroke-width="2"/>
-                                <text x="424.5" y="92" text-anchor="middle" class="player-number">5</text>
-                                <circle cx="508" cy="87.5" r="8" fill="#e67e22" stroke="#d35400" stroke-width="2"/>
-                                <text x="508" y="92" text-anchor="middle" class="player-number">6</text>
-                            </g>
-                            
-                            <!-- Rotation 2 Players -->
-                            <g class="rotation-players hero-rotation-2-players">
-                                <circle cx="508" cy="87.5" r="8" fill="#e74c3c" stroke="#c0392b" stroke-width="2"/>
-                                <text x="508" y="92" text-anchor="middle" class="player-number">1</text>
-                                <circle cx="91.5" cy="87.5" r="8" fill="#3498db" stroke="#2980b9" stroke-width="2"/>
-                                <text x="91.5" y="92" text-anchor="middle" class="player-number">2</text>
-                                <circle cx="174.5" cy="87.5" r="8" fill="#f39c12" stroke="#e67e22" stroke-width="2"/>
-                                <text x="174.5" y="92" text-anchor="middle" class="player-number">3</text>
-                                <circle cx="258" cy="87.5" r="8" fill="#27ae60" stroke="#229954" stroke-width="2"/>
-                                <text x="258" y="92" text-anchor="middle" class="player-number">4</text>
-                                <circle cx="341.5" cy="87.5" r="8" fill="#9b59b6" stroke="#8e44ad" stroke-width="2"/>
-                                <text x="341.5" y="92" text-anchor="middle" class="player-number">5</text>
-                                <circle cx="424.5" cy="87.5" r="8" fill="#e67e22" stroke="#d35400" stroke-width="2"/>
-                                <text x="424.5" y="92" text-anchor="middle" class="player-number">6</text>
-                            </g>
-                            
-                            <!-- Rotation 3 Players -->
-                            <g class="rotation-players hero-rotation-3-players">
-                                <circle cx="424.5" cy="87.5" r="8" fill="#e74c3c" stroke="#c0392b" stroke-width="2"/>
-                                <text x="424.5" y="92" text-anchor="middle" class="player-number">1</text>
-                                <circle cx="508" cy="87.5" r="8" fill="#3498db" stroke="#2980b9" stroke-width="2"/>
-                                <text x="508" y="92" text-anchor="middle" class="player-number">2</text>
-                                <circle cx="91.5" cy="87.5" r="8" fill="#f39c12" stroke="#e67e22" stroke-width="2"/>
-                                <text x="91.5" y="92" text-anchor="middle" class="player-number">3</text>
-                                <circle cx="174.5" cy="87.5" r="8" fill="#27ae60" stroke="#229954" stroke-width="2"/>
-                                <text x="174.5" y="92" text-anchor="middle" class="player-number">4</text>
-                                <circle cx="258" cy="87.5" r="8" fill="#9b59b6" stroke="#8e44ad" stroke-width="2"/>
-                                <text x="258" y="92" text-anchor="middle" class="player-number">5</text>
-                                <circle cx="341.5" cy="87.5" r="8" fill="#e67e22" stroke="#d35400" stroke-width="2"/>
-                                <text x="341.5" y="92" text-anchor="middle" class="player-number">6</text>
-                            </g>
-                            
-                            <!-- Rotation 4 Players -->
-                            <g class="rotation-players hero-rotation-4-players">
-                                <circle cx="341.5" cy="87.5" r="8" fill="#e74c3c" stroke="#c0392b" stroke-width="2"/>
-                                <text x="341.5" y="92" text-anchor="middle" class="player-number">1</text>
-                                <circle cx="424.5" cy="87.5" r="8" fill="#3498db" stroke="#2980b9" stroke-width="2"/>
-                                <text x="424.5" y="92" text-anchor="middle" class="player-number">2</text>
-                                <circle cx="508" cy="87.5" r="8" fill="#f39c12" stroke="#e67e22" stroke-width="2"/>
-                                <text x="508" y="92" text-anchor="middle" class="player-number">3</text>
-                                <circle cx="91.5" cy="87.5" r="8" fill="#27ae60" stroke="#229954" stroke-width="2"/>
-                                <text x="91.5" y="92" text-anchor="middle" class="player-number">4</text>
-                                <circle cx="174.5" cy="87.5" r="8" fill="#9b59b6" stroke="#8e44ad" stroke-width="2"/>
-                                <text x="174.5" y="92" text-anchor="middle" class="player-number">5</text>
-                                <circle cx="258" cy="87.5" r="8" fill="#e67e22" stroke="#d35400" stroke-width="2"/>
-                                <text x="258" y="92" text-anchor="middle" class="player-number">6</text>
-                            </g>
-                            
-                            <!-- Rotation 5 Players -->
-                            <g class="rotation-players hero-rotation-5-players">
-                                <circle cx="258" cy="87.5" r="8" fill="#e74c3c" stroke="#c0392b" stroke-width="2"/>
-                                <text x="258" y="92" text-anchor="middle" class="player-number">1</text>
-                                <circle cx="341.5" cy="87.5" r="8" fill="#3498db" stroke="#2980b9" stroke-width="2"/>
-                                <text x="341.5" y="92" text-anchor="middle" class="player-number">2</text>
-                                <circle cx="424.5" cy="87.5" r="8" fill="#f39c12" stroke="#e67e22" stroke-width="2"/>
-                                <text x="424.5" y="92" text-anchor="middle" class="player-number">3</text>
-                                <circle cx="508" cy="87.5" r="8" fill="#27ae60" stroke="#229954" stroke-width="2"/>
-                                <text x="508" y="92" text-anchor="middle" class="player-number">4</text>
-                                <circle cx="91.5" cy="87.5" r="8" fill="#9b59b6" stroke="#8e44ad" stroke-width="2"/>
-                                <text x="91.5" y="92" text-anchor="middle" class="player-number">5</text>
-                                <circle cx="174.5" cy="87.5" r="8" fill="#e67e22" stroke="#d35400" stroke-width="2"/>
-                                <text x="174.5" y="92" text-anchor="middle" class="player-number">6</text>
-                            </g>
-                            
-                            <!-- Rotation 6 Players -->
-                            <g class="rotation-players hero-rotation-6-players">
-                                <circle cx="174.5" cy="87.5" r="8" fill="#e74c3c" stroke="#c0392b" stroke-width="2"/>
-                                <text x="174.5" y="92" text-anchor="middle" class="player-number">1</text>
-                                <circle cx="258" cy="87.5" r="8" fill="#3498db" stroke="#2980b9" stroke-width="2"/>
-                                <text x="258" y="92" text-anchor="middle" class="player-number">2</text>
-                                <circle cx="341.5" cy="87.5" r="8" fill="#f39c12" stroke="#e67e22" stroke-width="2"/>
-                                <text x="341.5" y="92" text-anchor="middle" class="player-number">3</text>
-                                <circle cx="424.5" cy="87.5" r="8" fill="#27ae60" stroke="#229954" stroke-width="2"/>
-                                <text x="424.5" y="92" text-anchor="middle" class="player-number">4</text>
-                                <circle cx="508" cy="87.5" r="8" fill="#9b59b6" stroke="#8e44ad" stroke-width="2"/>
-                                <text x="508" y="92" text-anchor="middle" class="player-number">5</text>
-                                <circle cx="91.5" cy="87.5" r="8" fill="#e67e22" stroke="#d35400" stroke-width="2"/>
-                                <text x="91.5" y="92" text-anchor="middle" class="player-number">6</text>
-                            </g>
-                        </g>
-                    </svg>
-                </div>
-            </div>
-        </section>
-
-        <!-- Rotation Demo Section -->
-        <section class="rotation-demo">
-            <div class="container">
-                <h3>Rotaciones 101</h3>
-                <p>Las rotaciones condicionan quién ataca y desde dónde. La analítica compara eficiencia por rotación y rotista.</p>
-                
-                <div class="rotation-interactive">
-                    <div class="rotation-controls">
-                        <p>Selecciona rotación:</p>
-                        <div class="rotation-buttons">
-                            <input type="radio" id="rotation-1" name="rotation" value="1" checked>
-                            <label for="rotation-1">Rotación 1</label>
-                            
-                            <input type="radio" id="rotation-2" name="rotation" value="2">
-                            <label for="rotation-2">Rotación 2</label>
-                            
-                            <input type="radio" id="rotation-3" name="rotation" value="3">
-                            <label for="rotation-3">Rotación 3</label>
-                            
-                            <input type="radio" id="rotation-4" name="rotation" value="4">
-                            <label for="rotation-4">Rotación 4</label>
-                            
-                            <input type="radio" id="rotation-5" name="rotation" value="5">
-                            <label for="rotation-5">Rotación 5</label>
-                            
-                            <input type="radio" id="rotation-6" name="rotation" value="6">
-                            <label for="rotation-6">Rotación 6</label>
-                        </div>
-                    </div>
-                    
-                    <div class="rotation-explanation">
-                        <div class="rotation-text rotation-1-text">
-                            <p><strong>Rotación 1:</strong> El colocador está en zona 2, ideal para ataques rápidos. El opuesto en zona 4 puede atacar desde el frente. Fortaleza: ataques frontales. Debilidad: recepción limitada.</p>
-                        </div>
-                        <div class="rotation-text rotation-2-text">
-                            <p><strong>Rotación 2:</strong> Colocador en zona 1, opuesto en zona 5. Buena para ataques de zona 4 y 2. Fortaleza: variedad de ataques. Debilidad: colocador debe moverse más.</p>
-                        </div>
-                        <div class="rotation-text rotation-3-text">
-                            <p><strong>Rotación 3:</strong> Colocador en zona 6, opuesto en zona 3. Ideal para ataques de zona 4. Fortaleza: ataques de zona 4. Debilidad: colocador en zona de recepción.</p>
-                        </div>
-                        <div class="rotation-text rotation-4-text">
-                            <p><strong>Rotación 4:</strong> Colocador en zona 5, opuesto en zona 2. Buena para ataques de zona 3 y 4. Fortaleza: ataques de zona 3. Debilidad: colocador debe cubrir más terreno.</p>
-                        </div>
-                        <div class="rotation-text rotation-5-text">
-                            <p><strong>Rotación 5:</strong> Colocador en zona 4, opuesto en zona 6. Ideal para ataques de zona 2. Fortaleza: ataques de zona 2. Debilidad: colocador en zona de ataque.</p>
-                        </div>
-                        <div class="rotation-text rotation-6-text">
-                            <p><strong>Rotación 6:</strong> Colocador en zona 3, opuesto en zona 1. Buena para ataques de zona 4. Fortaleza: ataques de zona 4. Debilidad: colocador debe moverse mucho.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Advanced Court Animation (JS-driven) -->
-                <div class="court" id="rotation-court" data-rotation="1" data-state="base" aria-label="Cancha, Rotación 1, base">
-                    <svg class="lines" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
-                        <!-- outer -->
-                        <rect x="0" y="0" width="100" height="100" class="outline"/>
-                        <!-- net (y=0) -->
-                        <line x1="0" y1="0" x2="100" y2="0" class="net"/>
-                        <!-- attack line (y=33) -->
-                        <line x1="0" y1="33" x2="100" y2="33" class="attack"/>
-                        <!-- optional light grid every 10 units -->
-                        <!-- vertical grid -->
-                        <line x1="10" y1="0" x2="10" y2="100" class="grid"/>
-                        <line x1="20" y1="0" x2="20" y2="100" class="grid"/>
-                        <line x1="30" y1="0" x2="30" y2="100" class="grid"/>
-                        <line x1="40" y1="0" x2="40" y2="100" class="grid"/>
-                        <line x1="50" y1="0" x2="50" y2="100" class="grid"/>
-                        <line x1="60" y1="0" x2="60" y2="100" class="grid"/>
-                        <line x1="70" y1="0" x2="70" y2="100" class="grid"/>
-                        <line x1="80" y1="0" x2="80" y2="100" class="grid"/>
-                        <line x1="90" y1="0" x2="90" y2="100" class="grid"/>
-                        <!-- horizontal grid -->
-                        <line x1="0" y1="10" x2="100" y2="10" class="grid"/>
-                        <line x1="0" y1="20" x2="100" y2="20" class="grid"/>
-                        <line x1="0" y1="30" x2="100" y2="30" class="grid"/>
-                        <line x1="0" y1="40" x2="100" y2="40" class="grid"/>
-                        <line x1="0" y1="50" x2="100" y2="50" class="grid"/>
-                        <line x1="0" y1="60" x2="100" y2="60" class="grid"/>
-                        <line x1="0" y1="70" x2="100" y2="70" class="grid"/>
-                        <line x1="0" y1="80" x2="100" y2="80" class="grid"/>
-                        <line x1="0" y1="90" x2="100" y2="90" class="grid"/>
-                    </svg>
-
-                    <div id="players" aria-hidden="false">
-                        <!-- JS will render 6 .player nodes and set --x / --y -->
-                    </div>
-
-                    <div class="controls">
-                        <button id="prev" type="button" aria-label="Rotación anterior">⟵ Prev</button>
-                        <button id="play" type="button" aria-label="Reproducir animación">Play ▶</button>
-                        <button id="next" type="button" aria-label="Siguiente rotación">Next ⟶</button>
-                        <select id="jump" aria-label="Saltar a rotación">
-                            <option value="1">Rotación 1</option>
-                            <option value="2">Rotación 2</option>
-                            <option value="3">Rotación 3</option>
-                            <option value="4">Rotación 4</option>
-                            <option value="5">Rotación 5</option>
-                            <option value="6">Rotación 6</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="chart-legend" aria-label="Roles de jugadores">
-                    <div class="legend-item"><span class="role-dot role-s"></span><span>Colocador (S)</span></div>
-                    <div class="legend-item"><span class="role-dot role-oh"></span><span>Punta (OH)</span></div>
-                    <div class="legend-item"><span class="role-dot role-mb"></span><span>Central (MB)</span></div>
-                    <div class="legend-item"><span class="role-dot role-op"></span><span>Opuesto (OP)</span></div>
-                </div>
             </div>
         </section>
 
         <!-- Analytics Tiles Section -->
-        <section class="analytics-tiles">
+        <section class="analytics-tiles panel">
             <div class="container">
                 <h3>La Analítica Cambia los Juegos</h3>
                 
@@ -355,12 +95,11 @@
         </section>
     </main>
 
-    <footer class="main-footer">
+    <footer class="site-footer">
         <div class="container">
             <p>&copy; 2024 Analytics de Voleibol. Demostración educativa.</p>
         </div>
     </footer>
 
-    <script src="rotation-interactive.js"></script>
 </body>
 </html>

@@ -1,432 +1,208 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Preguntas que Responde la Analítica - Analytics de Voleibol</title>
-    <link rel="stylesheet" href="styles.css">
-    <meta name="description" content="Preguntas clave de analítica de voleibol con workflows claros y visuales anotados.">
-    <meta property="og:title" content="Preguntas de Analítica - Voleibol">
-    <meta property="og:description" content="Workflows, decisiones y métricas para cambiar sets.">
-    <meta property="og:type" content="website">
-    <meta property="og:locale" content="es_ES">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Source+Serif+Pro:wght@400;600&display=swap" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Analítica de Voleibol — Preguntas que importan</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Source+Serif+Pro:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="main-header">
-        <nav class="main-nav">
-            <div class="nav-brand">
-                <h1>Analytics de Voleibol</h1>
-            </div>
-            <ul class="nav-links">
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="analytics-questions.html" class="active">Preguntas</a></li>
-                <li><a href="reflection.html">Reflexión</a></li>
-            </ul>
-        </nav>
-    </header>
+<header class="main-header">
+  <nav class="main-nav">
+    <div class="nav-brand">
+      <h1>Analytics de Voleibol</h1>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="analytics-questions.html" class="active">Preguntas</a></li>
+      <li><a href="reflection.html">Reflexión</a></li>
+    </ul>
+  </nav>
+</header>
+<header class="site-header">
+  <h1>Analítica de Voleibol — Preguntas que importan</h1>
+  <p class="subtitle">Un tablero atractivo con visualizaciones clave para responder las preguntas del analista.</p>
+</header>
 
-    <main>
-        <section class="page-header">
-            <div class="container">
-                <h2>¿Qué Puede Responder la Analítica?</h2>
-                <p>Una galería de preguntas reales que la analítica contesta, cada una con un workflow sin recolectar datos.</p>
-            </div>
-        </section>
+<main class="grid">
+  <!-- ===== KPI CARDS ===== -->
+  <section class="panel">
+    <h2>Estado del equipo (últimos N sets)</h2>
+    <div class="kpis" id="kpiRow" aria-live="polite"></div>
+    <aside class="explain" aria-label="Explicación: Estado del equipo">
+      <p>Muestra un resumen general del rendimiento del equipo en los últimos partidos. Incluye indicadores como side-out (SO%), puntos al saque (PS%), eficiencia de ataque, calidad de recepción, bloqueos y errores de saque.</p>
+      <h3>🧩 Cómo usarlo</h3>
+      <p>Sirve para tener una fotografía rápida del estado actual del equipo: si está recibiendo bien, si anota cuando saca, o si está cometiendo demasiados errores.</p>
+      <h3>Interpretación</h3>
+      <ul>
+        <li>SO% alto → el equipo gana más puntos cuando recibe (buena recepción + ataque).</li>
+        <li>PS% alto → el equipo presiona bien con el saque.</li>
+        <li>Eficiencia de ataque baja → problemas de definición o coordinación con el armador.</li>
+        <li>Bloq/set alto → defensa efectiva en la red.</li>
+        <li>Error de saque alto → riesgo innecesario o mala gestión del saque.</li>
+      </ul>
+    </aside>
+  </section>
 
-        <!-- Metric Definitions (global) -->
-        <section class="container">
-            <div class="metric-definitions" aria-label="Definiciones de métricas">
-                <p><strong>SO%</strong>: % de recepciones que terminan en punto propio (K1).</p>
-                <p><strong>PS%</strong>: % de rotaciones con saque que terminan en punto propio.</p>
-                <p><strong>EV</strong>: Valor esperado en puntos por acción.</p>
-                <p><strong>%Rbuena</strong>: % de recepciones clasificadas como buenas.</p>
-            </div>
-        </section>
-
-        <section class="questions-gallery">
-            <div class="container">
-                <!-- Question 1 -->
-                <div class="question-card">
-                    <h3>Q1. ¿A qué zona conviene dirigir el saque?</h3>
-                    
-                    <div class="workflow-section">
-                        <h4>Workflow</h4>
-                        <div class="workflow-content">
-                            <div class="workflow-step">
-                                <h5>Fuentes</h5>
-                                <p>Planillas de scouting (formato DataVolley) o muestras públicas; tabla didáctica con zona, receptor (A–F), calidad de recepción (B/R/M), punto sí/no.</p>
-                            </div>
-                            <div class="workflow-step">
-                                <h5>Procesar</h5>
-                                <p>Calcular % recepciones "buenas" por receptor y puntos tras saque por zona.</p>
-                            </div>
-                            <div class="workflow-step">
-                                <h5>Visual</h5>
-                                <div class="chart-container">
-                                    <div class="bar-chart" aria-label="% de recepciones buenas por receptor; n=120, últimas 4 fechas">
-                                        <h6>% Recepciones Buenas por Receptor</h6>
-                                        <div class="chart-bars">
-                                            <div class="bar-group">
-                                                <div class="bar" style="height: 60%"><span class="value-label">60%</span></div>
-                                                <span>Receptor A</span>
-                                            </div>
-                                            <div class="bar-group">
-                                                <div class="bar" style="height: 45%"><span class="value-label">45%</span></div>
-                                                <span>Receptor B</span>
-                                            </div>
-                                            <div class="bar-group">
-                                                <div class="bar" style="height: 80%"><span class="value-label">80%</span></div>
-                                                <span>Receptor C</span>
-                                            </div>
-                                            <div class="bar-group">
-                                                <div class="bar" style="height: 35%"><span class="value-label">35%</span></div>
-                                                <span>Receptor D</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="heatmap" aria-label="Heatmap de zonas de saque por EV esperado; rojo=mejor para nosotros, verde=peor">
-                                        <h6>Heatmap de Zonas de Saque</h6>
-                                        <div class="heatmap-grid">
-                                            <div class="heat-cell high">Z1</div>
-                                            <div class="heat-cell medium">Z2</div>
-                                            <div class="heat-cell low">Z3</div>
-                                            <div class="heat-cell medium">Z4</div>
-                                            <div class="heat-cell high">Z5</div>
-                                            <div class="heat-cell low">Z6</div>
-                                        </div>
-                                        <div class="legend" aria-label="Leyenda del heatmap">Rojo: peor para rival (mejor para nosotros) · Verde: mejor recepción</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="metrics-section">
-                        <h4>Métricas Clave</h4>
-                        <ul>
-                            <li><strong>%Rbuena:</strong> Porcentaje de recepciones buenas</li>
-                            <li><strong>Puntos/saque:</strong> Eficiencia de saque por zona</li>
-                            <li><strong>Error de saque:</strong> Tasa de errores por tipo de saque</li>
-                        </ul>
-                    </div>
-
-                    <div class="use-section">
-                        <h4>Uso en cancha</h4>
-                        <ul>
-                            <li>Pre-partido: define 2 zonas objetivo por rotación rival según %Rbuena y EV.</li>
-                            <li>En vivo: si hay 2 recepciones malas seguidas en Z5, mantén presión 4 saques.</li>
-                            <li>Si Error% del sacador > 15% en el set, pasar a flotado dirigido.</li>
-                        </ul>
-                    </div>
-
-                    <div class="impact-section">
-                        <h4>Impacto esperado</h4>
-                        <p><strong>+3–6 pts/set</strong> en formativas con targeting simple; menor si sube Error%.</p>
-                        <p class="note">n=120 recepciones, últimas 4 fechas, K1.</p>
-                    </div>
-
-                    <p class="decision-rule">Regla: prioriza la zona con menor %Rbuena del receptor objetivo y mejor EV(saque).</p>
-
-                    <div class="insight-section">
-                        <h4>Insight Típico</h4>
-                        <p>Zonas cortas a líneas débiles ↓%Rbuena y ↑probabilidad de punto, pero sube riesgo de error propio.</p>
-                    </div>
-
-                    <div class="risks-section">
-                        <h4>Riesgos</h4>
-                        <p>Muestra chica, rotaciones rivales, game plan cambiante.</p>
-                    </div>
-                </div>
-
-                <!-- Question 2 -->
-                <div class="question-card">
-                    <h3>Q2. ¿Qué rotación nos da más (o menos) puntos?</h3>
-                    
-                    <div class="workflow-section">
-                        <h4>Workflow</h4>
-                        <div class="workflow-content">
-                            <div class="workflow-step">
-                                <h5>Fuente</h5>
-                                <p>Hojas de partido con etiqueta de rotación (1–6).</p>
-                            </div>
-                            <div class="workflow-step">
-                                <h5>Procesar</h5>
-                                <p>Puntos a favor vs en contra por rotación; tasa de side-out (SO%) y point scoring (PS%).</p>
-                            </div>
-                            <div class="workflow-step">
-                                <h5>Visual</h5>
-                                <div class="chart-container">
-                                    <div class="slope-chart" aria-label="SO% y PS% por rotación; n=180 rallies, torneo regional">
-                                        <h6>Rendimiento por Rotación</h6>
-                                        <div class="slope-chart-content">
-                                            <div class="rotation-performance">
-                                                <div class="rotation-bar">
-                                                    <span>Rotación 1</span>
-                                                    <div class="performance-bar">
-                                                        <div class="so-bar" style="width: 65%"></div>
-                                                        <div class="ps-bar" style="width: 45%"></div>
-                                                    </div>
-                                                </div>
-                                                <div class="rotation-bar">
-                                                    <span>Rotación 2</span>
-                                                    <div class="performance-bar">
-                                                        <div class="so-bar" style="width: 80%"></div>
-                                                        <div class="ps-bar" style="width: 70%"></div>
-                                                    </div>
-                                                </div>
-                                                <div class="rotation-bar">
-                                                    <span>Rotación 3</span>
-                                                    <div class="performance-bar">
-                                                        <div class="so-bar" style="width: 55%"></div>
-                                                        <div class="ps-bar" style="width: 60%"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="chart-legend">
-                                                <div class="legend-item">
-                                                    <div class="legend-color so-color"></div>
-                                                    <span>SO% (Side-out)</span>
-                                                </div>
-                                                <div class="legend-item">
-                                                    <div class="legend-color ps-color"></div>
-                                                    <span>PS% (Point Scoring)</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="metrics-section">
-                        <h4>Métricas</h4>
-                        <ul>
-                            <li><strong>SO%:</strong> Recepción → punto</li>
-                            <li><strong>PS%:</strong> Con saque → punto</li>
-                            <li><strong>Diferencial por rotación:</strong> Comparativa de rendimiento</li>
-                        </ul>
-                        <p class="note">Net/100 = PS% − (100% − SO%) aproximado a puntos por 100 rallies.</p>
-                    </div>
-
-                    <div class="decision-box" aria-label="Conclusiones por rotación">
-                        <p><strong>Rotación top:</strong> 2 (Net +9/100 rallies)</p>
-                        <p><strong>Rotación a corregir:</strong> 3 (Net −7/100) → añadir receptor de apoyo, buscar primer tiempo.</p>
-                        <p class="note">n=180 rallies; torneo regional; K1 y K2.</p>
-                    </div>
-
-                    <div class="insight-section">
-                        <h4>Insight Típico</h4>
-                        <p>Una rotación con atacante primario en salida mejora PS%; otra con recepción débil cae en SO%.</p>
-                    </div>
-                </div>
-
-                <!-- Question 3 -->
-                <div class="question-card">
-                    <h3>Q3. ¿Qué decide el colocador y cómo impacta?</h3>
-                    
-                    <div class="workflow-section">
-                        <h4>Workflow</h4>
-                        <div class="workflow-content">
-                            <div class="workflow-step">
-                                <h5>Fuente</h5>
-                                <p>Planillas con set location y tempo (K1/K2).</p>
-                            </div>
-                            <div class="workflow-step">
-                                <h5>Procesar</h5>
-                                <p>Tasa de éxito por tipo de armado (primer tiempo, fuera, pipe) y por acción/alcance del colocador.</p>
-                            </div>
-                            <div class="workflow-step">
-                                <h5>Visual</h5>
-                                <div class="chart-container">
-                                    <div class="matrix-chart">
-                                        <h6>Matriz de Éxito por Tipo de Armado</h6>
-                                        <table class="success-matrix">
-                                            <thead>
-                                                <tr>
-                                                    <th>Tipo de Armado</th>
-                                                    <th>% Punto</th>
-                                                    <th>Error Forzado</th>
-                                                    <th>Error No Forzado</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>Primer Tiempo</td>
-                                                    <td>75%</td>
-                                                    <td>15%</td>
-                                                    <td>10%</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Fuera</td>
-                                                    <td>60%</td>
-                                                    <td>20%</td>
-                                                    <td>20%</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Pipe</td>
-                                                    <td>45%</td>
-                                                    <td>25%</td>
-                                                    <td>30%</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                    <div class="toggle-row" role="group" aria-label="Contexto del armado">
-                                        <label><input type="radio" name="contexto-set" checked> K1</label>
-                                        <label><input type="radio" name="contexto-set"> K2</label>
-                                    </div>
-                                    <p class="decision-rule">Regla: en K1, prioriza Primer Tiempo (EV +0.18); en K2, abrir a OP largo (EV +0.06).</p>
-                                    <div class="dist-row" aria-label="Distribución de armados">
-                                        <span>OH</span><div class="dist-bar"><div class="fill" style="width: 42%"></div></div>
-                                        <span>OP</span><div class="dist-bar"><div class="fill" style="width: 28%"></div></div>
-                                        <span>MB</span><div class="dist-bar"><div class="fill" style="width: 30%"></div></div>
-                                    </div>
-                                    <p class="note">n=95 armados, últimas 3 fechas; segmentar por calidad de recepción.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="metrics-section">
-                        <h4>Métricas</h4>
-                        <ul>
-                            <li><strong>% punto tras armado:</strong> Eficiencia del ataque</li>
-                            <li><strong>Error forzado/no forzado:</strong> Calidad de la decisión</li>
-                            <li><strong>Distribución de armados:</strong> Variedad táctica</li>
-                        </ul>
-                    </div>
-
-                    <div class="insight-section">
-                        <h4>Insight</h4>
-                        <p>Mayor disponibilidad de primer tiempo y variedad correlacionan con SO% más alta (dependiente del nivel).</p>
-                    </div>
-                </div>
-
-                <!-- Question 4 -->
-                <div class="question-card">
-                    <h3>Q4. ¿Conviene apostar por saques agresivos o consistentes?</h3>
-                    
-                    <div class="workflow-section">
-                        <h4>Workflow</h4>
-                        <div class="workflow-content">
-                            <div class="workflow-step">
-                                <h5>Fuente</h5>
-                                <p>Tabla con tipo de saque (salto/agresivo vs flotado/seguro), errores, aces, puntos netos.</p>
-                            </div>
-                            <div class="workflow-step">
-                                <h5>Procesar</h5>
-                                <p>Valor esperado por saque = (prob. ace × 1) + (prob. recepción mala × α) − (prob. error × 1).</p>
-                            </div>
-                            <div class="workflow-step">
-                                <h5>Visual</h5>
-                                <div class="chart-container">
-                                    <div class="ev-chart" aria-label="Desglose del valor esperado del saque; α configurable por nivel">
-                                        <h6>Valor Esperado por Tipo de Saque</h6>
-                                        <div class="waterfall" aria-label="Desglose del EV por componentes">
-                                            <div class="wf-row"><span>Ace%</span><span class="pos">+0.10</span></div>
-                                            <div class="wf-row"><span>Rec. mala × α</span><span class="pos">+0.08</span></div>
-                                            <div class="wf-row"><span>Error%</span><span class="neg">−0.18</span></div>
-                                            <div class="wf-row result"><span>EV</span><span class="total">0.00</span></div>
-                                            <p class="note">α=0.30; n=80 saques; últimas 2 fechas.</p>
-                                        </div>
-                                        <p class="decision-rule">Regla: usar salto sólo vs receptor débil; cortar si Error% > 15%.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="metrics-section">
-                        <h4>Métricas</h4>
-                        <ul>
-                            <li><strong>Ace%:</strong> Porcentaje de aces</li>
-                            <li><strong>Error%:</strong> Porcentaje de errores</li>
-                            <li><strong>EV(saque):</strong> Valor esperado del saque</li>
-                        </ul>
-                    </div>
-
-                    <div class="insight-section">
-                        <h4>Insight</h4>
-                        <p>En categorías formativas, flotado dirigido puede superar salto arriesgado en EV si el error propio es alto.</p>
-                    </div>
-                </div>
-
-                <!-- Question 5 -->
-                <div class="question-card">
-                    <h3>Q5. ¿Cómo priorizar scouting rival en poco tiempo?</h3>
-                    
-                    <div class="workflow-section">
-                        <h4>Workflow Práctico</h4>
-                        <div class="workflow-content">
-                            <div class="workflow-step">
-                                <h5>Recojo Mínimo</h5>
-                                <p>En 1 set, registrar tres cosas del rival: receptor más débil, tendencia de armador (corto/largo), zona favorita del opuesto.</p>
-                            </div>
-                            <div class="workflow-step">
-                                <h5>Procesar</h5>
-                                <p>Tabla corta y shot chart manual de 10–15 jugadas.</p>
-                            </div>
-                            <div class="workflow-step">
-                                <h5>Visual</h5>
-                                <div class="chart-container">
-                                    <div class="scouting-board">
-                                        <h6>Rápidos Ajustes</h6>
-                                        <div class="adjustment-grid">
-                                            <div class="adjustment-item">
-                                                <strong>Saque a Zona 5</strong>
-                                                <p>Receptor más débil</p>
-                                            </div>
-                                            <div class="adjustment-item">
-                                                <strong>Bloque en Diagonal Corta</strong>
-                                                <p>Opuesto favorito</p>
-                                            </div>
-                                            <div class="adjustment-item">
-                                                <strong>Presión en Colocador</strong>
-                                                <p>Forzar armados largos</p>
-                                            </div>
-                                            <div class="adjustment-item">
-                                                <strong>Cobertura de Zona 4</strong>
-                                                <p>Defensa de ataque principal</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="plan-activo" aria-label="Plan de ajustes en vivo">
-                                        <h6>Plan activo (actualizar en set 2)</h6>
-                                        <ul>
-                                            <li>Saque a Z5 vs Receptor C (2 hits/5)</li>
-                                            <li>Bloque diagonal corta vs Opuesto (3 blocks/7)</li>
-                                        </ul>
-                                        <p class="note">Actualizar cada 10–15 jugadas; no sobre‑ajustar si no hay patrón.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="metrics-section">
-                        <h4>Métricas</h4>
-                        <ul>
-                            <li><strong>Checklist hits:</strong> Veces que el plan provoca recepción mala o ataque predecible</li>
-                        </ul>
-                    </div>
-
-                    <div class="insight-section">
-                        <h4>Insight</h4>
-                        <p>Herramientas pro permiten filtrar por situación y ver clips inmediatamente, acelerando el proceso de scouting.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="main-footer">
-        <div class="container">
-            <p>&copy; 2024 Analytics de Voleibol. Demostración educativa.</p>
+  <!-- ===== ROTATION HEATMAPS ===== -->
+  <section class="panel two-col">
+    <div>
+      <div class="panel-head">
+        <h2>Eficiencia por rotación (R1–R6)</h2>
+        <div class="tabs">
+          <button class="tab active" data-rot-mode="so">Side-Out%</button>
+          <button class="tab" data-rot-mode="ps">Puntos al saque%</button>
         </div>
-    </footer>
+      </div>
+      <div class="heatmaps">
+        <div class="heatmap" id="rotationHeatmap" aria-label="Heatmap de eficiencia por rotación"></div>
+      </div>
+    </div>
+    <aside class="explain" aria-label="Explicación: Eficiencia por rotación">
+      <p>Compara el rendimiento del equipo en cada rotación del sistema 5–1.</p>
+      <h3>🔄 Cómo usarlo</h3>
+      <p>Ayuda a identificar en qué rotaciones el equipo gana o pierde más puntos. Sirve para planificar cambios de jugadoras, ajustes de recepción o estrategias de ataque según la posición del armador.</p>
+      <h3>Interpretación</h3>
+      <ul>
+        <li>Rotaciones verdes (eficientes) → buena combinación de armador y atacantes.</li>
+        <li>Rotaciones rojas (ineficientes) → problemas de recepción o de construcción ofensiva.</li>
+        <li>Permite asociar el éxito de cada rotación con quién está en primera o segunda línea.</li>
+      </ul>
+    </aside>
+  </section>
+
+  <!-- ===== SERVE TARGETING (OPP) ===== -->
+  <section class="panel two-col">
+    <div>
+      <h2>Objetivo de saque al rival (zonas 1–6)</h2>
+      <div id="serveTargetHeatmap" class="heatmap" aria-label="Mapa de calor de destino de saques"></div>
+    </div>
+    <aside class="explain" aria-label="Explicación: Objetivo de saque al rival">
+      <p>Indica a qué zonas de la cancha rival se dirigen los saques y con qué frecuencia.</p>
+      <h3>🎯 Cómo usarlo</h3>
+      <p>Permite verificar si el plan de saque se está cumpliendo y ajustar las zonas objetivo para incomodar la recepción contraria.</p>
+      <h3>Interpretación</h3>
+      <ul>
+        <li>Zonas con alto porcentaje → el equipo concentra allí sus saques.</li>
+        <li>Si una zona recibe mucho y sigue recibiendo bien, conviene cambiar el objetivo.</li>
+        <li>Si una zona tiene mala recepción, reforzar los saques dirigidos a ella.</li>
+      </ul>
+    </aside>
+  </section>
+
+  <!-- ===== RECEIVE QUALITY ===== -->
+  <section class="panel two-col">
+    <div>
+      <h2>Nuestra recepción por zona (promedio 0–3)</h2>
+      <div id="receiveQualityBars" class="chart" aria-label="Barras de calidad de recepción"></div>
+    </div>
+    <aside class="explain" aria-label="Explicación: Recepción por zona">
+      <p>Evalúa la calidad promedio de recepción en cada zona del campo (0 = mala, 3 = perfecta).</p>
+      <h3>🛡️ Cómo usarlo</h3>
+      <p>Identifica qué zonas o jugadoras están recibiendo mejor o peor para reorganizar la formación o enfocar el entrenamiento.</p>
+      <h3>Interpretación</h3>
+      <ul>
+        <li>Promedios altos → estabilidad y variedad en el ataque posterior.</li>
+        <li>Promedios bajos → vulnerabilidades en la línea de recepción o mala comunicación.</li>
+      </ul>
+    </aside>
+  </section>
+
+  <!-- ===== SETTER DISTRIBUTION ===== -->
+  <section class="panel two-col">
+    <div>
+      <h2>Distribución del armador por atacante</h2>
+      <div id="setterDistribution" class="chart" aria-label="Barras apiladas por atacante y rotación"></div>
+    </div>
+    <aside class="explain" aria-label="Explicación: Distribución del armador">
+      <p>Muestra a qué atacante el armador da más balones en cada rotación.</p>
+      <h3>⚙️ Cómo usarlo</h3>
+      <p>Permite analizar si el juego ofensivo es equilibrado o si hay dependencia de una jugadora.</p>
+      <h3>Interpretación</h3>
+      <ul>
+        <li>Reparto balanceado → el equipo es menos predecible.</li>
+        <li>Exceso hacia una atacante → puede indicar confianza, pero también previsibilidad o debilidad en otras opciones.</li>
+      </ul>
+    </aside>
+  </section>
+
+  <!-- ===== ATTACK EFFICIENCY ===== -->
+  <section class="panel two-col">
+    <div>
+      <h2>Eficiencia de ataque por zona</h2>
+      <div id="attackEfficiencyBars" class="chart" aria-label="Barras de eficiencia por zona"></div>
+    </div>
+    <aside class="explain" aria-label="Explicación: Eficiencia de ataque">
+      <p>Refleja la efectividad de los ataques según su origen en la cancha (izquierda, centro, derecha, pipe, etc.).</p>
+      <h3>💥 Cómo usarlo</h3>
+      <p>Ayuda a entender desde qué zonas el equipo anota más y dónde pierde puntos.</p>
+      <h3>Interpretación</h3>
+      <ul>
+        <li>Porcentajes altos → zonas o jugadoras con buena sincronización y lectura del bloqueo.</li>
+        <li>Porcentajes bajos → puntos de mejora técnica o de toma de decisión en la construcción del ataque.</li>
+      </ul>
+    </aside>
+  </section>
+
+  <!-- ===== MOMENTUM (RUNS) ===== -->
+  <section class="panel two-col">
+    <div>
+      <h2>Rachas de puntos (momentum)</h2>
+      <div id="runLengthHist" class="chart" aria-label="Histograma de rachas de puntos mientras servimos"></div>
+    </div>
+    <aside class="explain" aria-label="Explicación: Rachas de puntos">
+      <p>Muestra con qué frecuencia el equipo encadena secuencias de puntos consecutivos.</p>
+      <h3>⚡ Cómo usarlo</h3>
+      <p>Orienta cuándo pedir tiempo o realizar cambios para cortar o aprovechar las rachas.</p>
+      <h3>Interpretación</h3>
+      <ul>
+        <li>Muchas rachas cortas → equipo inestable o rival fuerte.</li>
+        <li>Rachas largas → dominio del ritmo del partido y buena concentración.</li>
+        <li>Sirve también para estudiar qué rotaciones generan más impulso positivo o negativo.</li>
+      </ul>
+    </aside>
+  </section>
+
+  <!-- ===== PLAYER IMPACT ===== -->
+  <section class="panel two-col">
+    <div>
+      <h2>Impacto por jugadora (On/Off ±)</h2>
+      <div id="onOffBars" class="chart" aria-label="Impacto neto por jugadora"></div>
+    </div>
+    <aside class="explain" aria-label="Explicación: Impacto por jugadora">
+      <p>Mide la diferencia de puntos que obtiene o recibe el equipo con una jugadora en cancha comparado con cuando no está, calculado por cada 100 rallies.</p>
+      <h3>🧍‍♀️ Cómo usarlo</h3>
+      <p>Ayuda a entender el impacto real de cada jugadora en el resultado global, más allá de sus estadísticas individuales.</p>
+      <h3>Interpretación</h3>
+      <ul>
+        <li>Valor positivo → el equipo rinde mejor cuando la jugadora está en cancha.</li>
+        <li>Valor negativo → el equipo pierde más puntos o sufre más errores con ella en juego.</li>
+      </ul>
+      <p>Es útil para decisiones tácticas de cambio o cierre de sets.</p>
+    </aside>
+  </section>
+
+  <!-- ===== QUESTIONS LIST ===== -->
+  <section class="panel">
+    <h2>Guía de preguntas del analista</h2>
+    <ul class="q-list">
+      <li>¿En qué rotaciones tenemos mayor SO% y por qué?</li>
+      <li>¿Qué patrón de saque reduce más las recepciones 3.0 del rival?</li>
+      <li>¿Qué zonas nos dan mejor eficiencia de ataque y cómo varía por rotación?</li>
+      <li>¿Cómo cambia la distribución del armador según la calidad de recepción?</li>
+      <li>¿Qué jugadoras maximizan el ± y con qué combinaciones de primera línea?</li>
+      <li>¿Cuándo aparecen rachas del rival y cuál es el trigger de timeout óptimo?</li>
+    </ul>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <small>Plantilla interactiva (HTML/CSS/JS). Reemplaza el bloque <code>DATA</code> en <code>charts.js</code> con tus datos reales.</small>
+</footer>
+
+<script src="chart.js"></script>
 </body>
 </html>

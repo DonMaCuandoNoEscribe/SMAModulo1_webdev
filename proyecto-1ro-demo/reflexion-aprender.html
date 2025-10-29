@@ -87,91 +87,78 @@
         </header>
 
         <div class="bento__grid">
-          <!-- Deck of interactive cards (no JS) -->
+          <!-- Deck of cards (expanded view) -->
           <div class="deck">
             <!-- Card 1 -->
-            <label class="anki">
-              <input type="checkbox" aria-label="Voltear tarjeta 1" />
-              <div class="face front">¿Qué es el <strong>efecto de espaciamiento</strong>?</div>
+            <details class="anki">
+              <summary class="face front">
+                <div><strong>¿Qué es el efecto de espaciamiento?</strong></div>
+                <span class="visually-hidden">Pulsa para ver la respuesta</span>
+              </summary>
               <div class="face back">
-                Estudiar en sesiones separadas aumenta la retención a largo plazo frente a estudiar todo de una.
-                <div class="grade">
-                  <span>De nuevo</span><span>Difícil</span><span>Bien</span><span>Fácil</span>
-                </div>
+                <div>Estudiar en sesiones separadas aumenta la retención a largo plazo frente a estudiar todo de una.</div>
+                <div class="grade"><span>De nuevo</span><span>Difícil</span><span>Bien</span><span>Fácil</span></div>
               </div>
-            </label>
+            </details>
 
             <!-- Card 2 -->
-            <label class="anki">
-              <input type="checkbox" aria-label="Voltear tarjeta 2" />
-              <div class="face front">¿Por qué la <strong>recuperación</strong> supera a la relectura?</div>
+            <details class="anki">
+              <summary class="face front">
+                <div><strong>¿Por qué la recuperación supera a la relectura?</strong></div>
+                <span class="visually-hidden">Pulsa para ver la respuesta</span>
+              </summary>
               <div class="face back">
-                Porque obliga a reconstruir la respuesta desde memoria, reforzando rutas neuronales (testing effect).
+                <div>Porque obliga a reconstruir la respuesta desde memoria, reforzando rutas neuronales (testing effect).</div>
                 <div class="grade"><span>De nuevo</span><span>Difícil</span><span>Bien</span><span>Fácil</span></div>
               </div>
-            </label>
+            </details>
 
             <!-- Card 3 -->
-            <label class="anki">
-              <input type="checkbox" aria-label="Voltear tarjeta 3" />
-              <div class="face front">Regla práctica: “<strong>una idea = una tarjeta</strong>”. ¿Por qué?</div>
+            <details class="anki">
+              <summary class="face front">
+                <div><strong>Regla práctica: "una idea = una tarjeta". ¿Por qué?</strong></div>
+                <span class="visually-hidden">Pulsa para ver la respuesta</span>
+              </summary>
               <div class="face back">
-                Tarjetas granulares evitan “olvidos mezclados” y hacen la programación del algoritmo más precisa.
+                <div>Tarjetas granulares evitan "olvidos mezclados" y hacen la programación del algoritmo más precisa.</div>
                 <div class="grade"><span>De nuevo</span><span>Difícil</span><span>Bien</span><span>Fácil</span></div>
               </div>
-            </label>
+            </details>
 
             <!-- Card 4 -->
-            <label class="anki">
-              <input type="checkbox" aria-label="Voltear tarjeta 4" />
-              <div class="face front">Formato ideal: <strong>Pregunta → respuesta corta</strong></div>
+            <details class="anki">
+              <summary class="face front">
+                <div><strong>Formato ideal: Pregunta → respuesta corta</strong></div>
+                <span class="visually-hidden">Pulsa para ver la respuesta</span>
+              </summary>
               <div class="face back">
-                Respuestas breves y específicas aumentan aciertos y velocidad de repaso.
+                <div>Respuestas breves y específicas aumentan aciertos y velocidad de repaso.</div>
                 <div class="grade"><span>De nuevo</span><span>Difícil</span><span>Bien</span><span>Fácil</span></div>
               </div>
-            </label>
+            </details>
 
             <!-- Card 5 -->
-            <label class="anki">
-              <input type="checkbox" aria-label="Voltear tarjeta 5" />
-              <div class="face front">Señal roja: “<strong>si no lo explico en 1 frase → creo tarjeta</strong>”</div>
+            <details class="anki">
+              <summary class="face front">
+                <div><strong>Señal roja: "si no lo explico en 1 frase → creo tarjeta"</strong></div>
+                <span class="visually-hidden">Pulsa para ver la respuesta</span>
+              </summary>
               <div class="face back">
-                Convertir dudas en tarjetas reduce la fricción y acelera la comprensión sostenida.
+                <div>Convertir dudas en tarjetas reduce la fricción y acelera la comprensión sostenida.</div>
                 <div class="grade"><span>De nuevo</span><span>Difícil</span><span>Bien</span><span>Fácil</span></div>
               </div>
-            </label>
+            </details>
           </div>
 
-          <!-- Heatmap + stats inspired by screenshot -->
-          <aside class="heat card">
-            <h4 class="heat__title">Racha de estudio (ejemplo)</h4>
-            <div class="heat__grid" role="img" aria-label="Calendario tipo heatmap de 20×7 días">
-              <!-- 20 columnas × 7 filas. Usa clases c0–c4 para intensidad -->
-              <!-- fila 1 -->
-              <span class="c0"></span><span class="c0"></span><span class="c1"></span><span class="c2"></span><span class="c3"></span><span class="c4"></span><span class="c0"></span>
-              <!-- fila 2 -->
-              <span class="c0"></span><span class="c1"></span><span class="c0"></span><span class="c2"></span><span class="c3"></span><span class="c4"></span><span class="c2"></span>
-              <!-- fila 3 -->
-              <span class="c0"></span><span class="c0"></span><span class="c0"></span><span class="c1"></span><span class="c3"></span><span class="c2"></span><span class="c4"></span>
-              <!-- fila 4 -->
-              <span class="c0"></span><span class="c0"></span><span class="c2"></span><span class="c2"></span><span class="c1"></span><span class="c3"></span><span class="c0"></span>
-              <!-- fila 5 -->
-              <span class="c0"></span><span class="c0"></span><span class="c1"></span><span class="c4"></span><span class="c3"></span><span class="c2"></span><span class="c0"></span>
-              <!-- fila 6 -->
-              <span class="c0"></span><span class="c1"></span><span class="c2"></span><span class="c0"></span><span class="c0"></span><span class="c3"></span><span class="c4"></span>
-              <!-- fila 7 -->
-              <span class="c0"></span><span class="c0"></span><span class="c0"></span><span class="c2"></span><span class="c3"></span><span class="c4"></span><span class="c1"></span>
-              <!-- fila 8 -->
-              <span class="c0"></span><span class="c2"></span><span class="c1"></span><span class="c0"></span><span class="c3"></span><span class="c4"></span><span class="c2"></span>
-            </div>
-
-            <div class="legend">
-              <span>Promedio diario: <strong>43</strong> tarjetas</span>
-              <span>Días con estudio: <strong>51%</strong></span>
-              <span>Racha más larga: <strong>13</strong> días</span>
-              <span>Racha actual: <strong>0</strong> días</span>
-            </div>
-          </aside>
+        <div class="card">
+          <h4 class="section__title">Ventajas de la repetición espaciada</h4>
+          <ul class="list">
+            <li><strong>Retención a largo plazo</strong> — Mejor que el “cramming”. <span class="tags"><span class="tag">Academic Affairs</span><span class="tag">Psychology</span><span class="tag">PMC</span></span></li>
+            <li><strong>Uso eficiente del tiempo</strong> — Repasos con más “tirón” de memoria. <span class="tags"><span class="tag">learningtree.com</span><span class="tag">BCU</span></span></li>
+            <li><strong>Reducción del olvido</strong> — Combate la curva del olvido. <span class="tags"><span class="tag">Whatfix</span></span></li>
+            <li><strong>Transferencia a nuevos contextos</strong> — Mejora aplicación en otras situaciones. <span class="tags"><span class="tag">PMC</span></span></li>
+            <li><strong>Planificación y hábito</strong> — Ritmo sostenible y organizado. <span class="tags"><span class="tag">kpu.ca</span></span></li>
+          </ul>
         </div>
 
         <p class="callout">
@@ -188,68 +175,46 @@
         </header>
 
         <div class="board">
-          <!-- Day columns (Mon–Fri) -->
+          <!-- Simplified schedule: 3 days, 9–17 -->
           <div class="col">
             <h4>Lunes</h4>
             <div class="lane">
-              <div class="block t0500 t0515">Anki warm-up</div>
-              <div class="block t0515 t0815 deep">OMSA — Homework</div>
-              <div class="block t1000 t1200 deep">Deep Work / Meetings</div>
-              <div class="block t1200 t1400">GYM</div>
-              <div class="block t1515 t1645">Work: Review / Learn</div>
-            </div>
-          </div>
-
-          <div class="col">
-            <h4>Martes</h4>
-            <div class="lane">
-              <div class="block t0500 t0515">Anki warm-up</div>
-              <div class="block t0545 t0625">MATH</div>
-              <div class="block t0630 t0745">Volleyball</div>
-              <div class="block t1000 t1300 deep">Deep Work</div>
-              <div class="block t1330 t1400">Review / Learn</div>
-              <div class="block t1530 t1630">OMSA — Lecture</div>
-              <div class="block t1630 t1700">Anki Review</div>
+              <div class="block t0900 t1200 deep">Deep Work</div>
+              <div class="block t1300 t1700">Proyecto / Revisión</div>
             </div>
           </div>
 
           <div class="col">
             <h4>Miércoles</h4>
             <div class="lane">
-              <div class="block t0500 t0515">Anki warm-up</div>
-              <div class="block t0515 t0815 deep">OMSA — Projects</div>
-              <div class="block t1000 t1200 deep">Deep Work</div>
-              <div class="block t1200 t1400">GYM</div>
-              <div class="block t1515 t1645">Work: Review / Learn</div>
-            </div>
-          </div>
-
-          <div class="col">
-            <h4>Jueves</h4>
-            <div class="lane">
-              <div class="block t0500 t0515">Anki warm-up</div>
-              <div class="block t0630 t0745">Volleyball</div>
-              <div class="block t1000 t1300 deep">Deep Work</div>
-              <div class="block t1530 t1630">OMSA — Lecture</div>
-              <div class="block t1630 t1700">Anki Review</div>
+              <div class="block t0900 t1200">Planificación y lectura</div>
+              <div class="block t1300 t1700 deep">Proyecto</div>
             </div>
           </div>
 
           <div class="col">
             <h4>Viernes</h4>
             <div class="lane">
-              <div class="block t0500 t0515">Anki warm-up</div>
-              <div class="block t0515 t0815 deep">OMSA — Homework</div>
-              <div class="block t1000 t1200 deep">Deep Work / Meetings</div>
-              <div class="block t1200 t1400">GYM</div>
+              <div class="block t0900 t1200">Revisión / Aprender</div>
+              <div class="block t1300 t1700">Entrega / Presentación</div>
             </div>
           </div>
 
           <!-- Hour ruler -->
           <ul class="ruler" aria-hidden="true">
-            <li>5:00</li><li>6:00</li><li>7:00</li><li>8:00</li><li>9:00</li>
-            <li>10:00</li><li>11:00</li><li>12:00</li><li>13:00</li><li>14:00</li>
-            <li>15:00</li><li>16:00</li><li>17:00</li>
+            <li>9:00</li><li>10:00</li><li>11:00</li><li>12:00</li>
+            <li>13:00</li><li>14:00</li><li>15:00</li><li>16:00</li><li>17:00</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h4 class="section__title">Ventajas del Time Blocking</h4>
+          <ul class="list">
+            <li><strong>Organización y previsión</strong> — Bloques claros por tarea. <span class="tags"><span class="tag">Indeed</span><span class="tag">Clockwise</span></span></li>
+            <li><strong>Más trabajo profundo</strong> — Menos distracciones y cambios de contexto. <span class="tags"><span class="tag">Clockwise</span><span class="tag">SRC</span></span></li>
+            <li><strong>Menos procrastinación</strong> — El bloque ya está reservado. <span class="tags"><span class="tag">Clockwise</span></span></li>
+            <li><strong>Protege tu agenda</strong> — Límites entre tareas y descanso. <span class="tags"><span class="tag">Monitask</span></span></li>
+            <li><strong>Tiempo según prioridades/energía</strong> — No domina lo urgente. <span class="tags"><span class="tag">World of Work Project</span></span></li>
           </ul>
         </div>
 
@@ -258,24 +223,55 @@
         </p>
       </article>
 
-      <!-- 2.3 TRABAJO ESTRUCTURADO -->
+      <!-- 2.3 PBL -->
       <article class="card bento">
         <header class="bento__head">
-          <h3 class="section__title">2.3 Trabajo estructurado</h3>
-          <p class="muted">Una micro-rutina repetible que elimina fricción.</p>
+          <h3 class="section__title">2.3 Aprendizaje Basado en Proyectos (PBL)</h3>
+          <p class="muted">En este curso, aprendemos creando — tu propia web con apoyo de IA.</p>
         </header>
 
-        <div class="steps">
-          <div class="step"><span>1</span> 5 min — Definir objetivo del bloque</div>
-          <div class="step"><span>2</span> 25–40 min — Tarea principal (modo avión)</div>
-          <div class="step"><span>3</span> 5 min — Mini-quiz sin apuntes</div>
-          <div class="step"><span>4</span> 2 min — Anotar dudas + <em>siguiente paso</em></div>
+        <div class="card">
+          <h4 class="section__title">Por qué lo usamos</h4>
+          <p>Cada estudiante desarrolla su sitio personal combinando HTML, CSS y colaboración con IA. El proyecto te convierte en autor y diseñador de tu conocimiento digital.</p>
         </div>
 
-        <div class="ring" style="--pct: .75" role="img" aria-label="Progreso ejemplo 75%">
-          <strong>75%</strong>
-          <span>Bloque completado</span>
+        <div class="grid two">
+          <article class="card">
+            <h4 class="section__title">Ventajas clave</h4>
+            <ul class="list">
+              <li><strong>Aprendizaje significativo</strong> — Construyes algo real.</li>
+              <li><strong>Pensamiento crítico</strong> — Evalúas y mejoras salidas de IA.</li>
+              <li><strong>Autonomía y creatividad</strong> — Voz e intereses propios.</li>
+              <li><strong>Responsabilidad digital</strong> — Atribución y verificación.</li>
+              <li><strong>Preparación para el futuro</strong> — Técnica + comunicación + ética.</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h4 class="section__title">Pasos del proyecto</h4>
+            <ol class="tight">
+              <li>Definir la meta</li>
+              <li>Explorar y leer código</li>
+              <li>Co-crear con IA</li>
+              <li>Construir el sitio</li>
+              <li>Publicar y reflexionar</li>
+            </ol>
+          </article>
         </div>
+
+        <div class="card">
+          <h4 class="section__title">PBL vs. Ver tutoriales</h4>
+          <table class="table">
+            <thead><tr><th>Aspecto</th><th>PBL</th><th>Ver tutoriales</th></tr></thead>
+            <tbody>
+              <tr><td>Propósito</td><td>Crear un producto propio</td><td>Repetir pasos de otro</td></tr>
+              <tr><td>Rol del estudiante</td><td>Diseñador activo y crítico</td><td>Observador pasivo</td></tr>
+              <tr><td>Resultado</td><td>Proyecto auténtico con voz personal</td><td>Copia funcional sin reflexión</td></tr>
+              <tr><td>Habilidad</td><td>Interpretar, decidir y crear</td><td>Ejecutar instrucciones</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="callout"><strong>Insight accionable:</strong> No aprendas “cómo se hace” una web: haz una web que diga quién eres.</p>
       </article>
     </section>
 
