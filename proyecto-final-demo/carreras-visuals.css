@@ -52,14 +52,15 @@
 }
 
 .section-content {
-    max-height: 5000px;
-    overflow: hidden;
+    max-height: none;
+    overflow: visible;
     transition: max-height 0.5s ease, padding 0.5s ease;
     padding: var(--spacing-lg);
 }
 
 .section-toggle:not(:checked) + .section-header + .section-content {
     max-height: 0;
+    overflow: hidden;
     padding: 0 var(--spacing-lg);
 }
 
@@ -155,6 +156,23 @@
     padding: var(--spacing-md);
     margin-bottom: var(--spacing-md);
     box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
+    overflow: hidden;
+}
+
+/* Center and contain visualization blocks */
+.sp500-tracker,
+.world-trade-map,
+.analytics-dashboard {
+    margin: 0 auto;
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.tradingview-widget-container {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
 }
 
 /* ===================================

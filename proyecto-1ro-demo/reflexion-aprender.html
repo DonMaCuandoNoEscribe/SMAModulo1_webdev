@@ -1,279 +1,377 @@
 <!doctype html>
 <html lang="es">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Aprender a aprender — Reflexión</title>
-    <meta name="description" content="Reflexión sobre cómo aprendí a aprender: Anki, bloques de tiempo y trabajo estructurado para avanzar con calma en temas difíciles.">
-    <link rel="stylesheet" href="styles.css">
-  </head>
-  <body>
-    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Aprender a aprender — Ejemplo Instructor</title>
+  <meta name="description" content="Un ejemplo de diseño web y estrategias de estudio: Anki, time-blocking y trabajo estructurado. HTML/CSS sin JS." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
-    <header class="page-header hero">
-      <div class="container">
-        <h1 class="page-title">Lo más importante que aprendí este año: Aprender a aprender</h1>
-        <p class="subtitle">Anki + Bloques de tiempo + Trabajo estructurado = Aprender temas difíciles con calma</p>
+  <!-- ====== HERO ====== -->
+  <header class="hero">
+    <div class="hero__bg" aria-hidden="true">
+      <div class="orb orb-a"></div>
+      <div class="orb orb-b"></div>
+      <div class="orb orb-c"></div>
+      <div class="grain"></div>
+    </div>
+
+    <div class="shell">
+      <div class="hero__badge">HTML + CSS • Sin JS</div>
+      <h1 class="hero__title">
+        Lo más valioso que aprendí este año:<br />
+        <span class="grad">Aprender a aprender</span>
+      </h1>
+      <p class="hero__tag">
+        Anki + Bloques de tiempo + Trabajo estructurado
+      </p>
+
+      <nav class="tabs" aria-label="Secciones">
+        <a href="#introduccion" class="tab">1. Introducción</a>
+        <a href="#aprendizajes" class="tab">2. Aprendizajes</a>
+        <a href="#experiencia" class="tab">3. Experiencia</a>
+        <a href="#cambios" class="tab">4. Cambios</a>
+        <a href="#mini-guia" class="tab">5. Mini-guía</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido" class="shell main">
+    <!-- ====== INTRO ====== -->
+    <section id="introduccion" class="section intro">
+      <div class="grid two">
+        <div class="card glass">
+          <h2 class="kicker">1) Introducción</h2>
+          <h3 class="section__title">Un sistema que me dio calma y progreso</h3>
+          <p>
+            Este año dejé de “estudiar a ciegas”. Con <strong>tarjetas Anki</strong>, <strong>bloques de tiempo</strong> y una
+            <strong>rutina simple</strong>, convertí temas difíciles en pasos alcanzables. Este sitio muestra el
+            <em>diseño</em> y la <em>estrategia</em> detrás de ese avance.
+          </p>
+          <p class="note">Meta de la sección: voz propia + propósito (Reflexión 40%).</p>
+        </div>
+
+        <aside class="stats card">
+          <div class="stat">
+            <span class="stat__num">3</span>
+            <span class="stat__label">Pilares</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num">15<span class="mini">min</span></span>
+            <span class="stat__label">Anki/día</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num">2×40</span>
+            <span class="stat__label">Bloques foco</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num">∞</span>
+            <span class="stat__label">Repetible</span>
+          </div>
+        </aside>
       </div>
-      <div class="hero-wave"></div>
-    </header>
+    </section>
 
-    <nav class="subnav" aria-label="Navegación de secciones">
-      <div class="container subnav-inner">
-        <a href="#introduccion">1. Introducción</a>
-        <a href="#aprendizajes">2. Aprendizajes</a>
-        <a href="#experiencia">3. Experiencia</a>
-        <a href="#cambios">4. Cambios</a>
-        <a href="#mini-guia">5. Mini‑guía</a>
-      </div>
-    </nav>
+    <!-- ====== APRENDIZAJES ====== -->
+    <section id="aprendizajes" class="section">
+      <h2 class="kicker">2) Aprendizajes más significativos</h2>
 
-    <main id="contenido" class="container">
-      <section id="introduccion" class="section intro">
-        <h2 class="section-title">1) Introducción personal</h2>
-        <p>
-          Este año descubrí algo que cambió cómo estudio: aprendí a aprender. Con Anki, bloques de tiempo y un método
-          claro para trabajar, pude entender temas que antes me parecían imposibles. Aquí cuento qué hice, por qué
-          funcionó y qué me llevo para el próximo año.
+      <!-- 2.1 ANKI -->
+      <article class="card bento">
+        <header class="bento__head">
+          <h3 class="section__title">2.1 Anki y repetición espaciada</h3>
+          <p class="muted">Memoria duradera por <em>espaciado</em> + <em>recuperación</em>.</p>
+        </header>
+
+        <div class="bento__grid">
+          <!-- Deck of interactive cards (no JS) -->
+          <div class="deck">
+            <!-- Card 1 -->
+            <label class="anki">
+              <input type="checkbox" aria-label="Voltear tarjeta 1" />
+              <div class="face front">¿Qué es el <strong>efecto de espaciamiento</strong>?</div>
+              <div class="face back">
+                Estudiar en sesiones separadas aumenta la retención a largo plazo frente a estudiar todo de una.
+                <div class="grade">
+                  <span>De nuevo</span><span>Difícil</span><span>Bien</span><span>Fácil</span>
+                </div>
+              </div>
+            </label>
+
+            <!-- Card 2 -->
+            <label class="anki">
+              <input type="checkbox" aria-label="Voltear tarjeta 2" />
+              <div class="face front">¿Por qué la <strong>recuperación</strong> supera a la relectura?</div>
+              <div class="face back">
+                Porque obliga a reconstruir la respuesta desde memoria, reforzando rutas neuronales (testing effect).
+                <div class="grade"><span>De nuevo</span><span>Difícil</span><span>Bien</span><span>Fácil</span></div>
+              </div>
+            </label>
+
+            <!-- Card 3 -->
+            <label class="anki">
+              <input type="checkbox" aria-label="Voltear tarjeta 3" />
+              <div class="face front">Regla práctica: “<strong>una idea = una tarjeta</strong>”. ¿Por qué?</div>
+              <div class="face back">
+                Tarjetas granulares evitan “olvidos mezclados” y hacen la programación del algoritmo más precisa.
+                <div class="grade"><span>De nuevo</span><span>Difícil</span><span>Bien</span><span>Fácil</span></div>
+              </div>
+            </label>
+
+            <!-- Card 4 -->
+            <label class="anki">
+              <input type="checkbox" aria-label="Voltear tarjeta 4" />
+              <div class="face front">Formato ideal: <strong>Pregunta → respuesta corta</strong></div>
+              <div class="face back">
+                Respuestas breves y específicas aumentan aciertos y velocidad de repaso.
+                <div class="grade"><span>De nuevo</span><span>Difícil</span><span>Bien</span><span>Fácil</span></div>
+              </div>
+            </label>
+
+            <!-- Card 5 -->
+            <label class="anki">
+              <input type="checkbox" aria-label="Voltear tarjeta 5" />
+              <div class="face front">Señal roja: “<strong>si no lo explico en 1 frase → creo tarjeta</strong>”</div>
+              <div class="face back">
+                Convertir dudas en tarjetas reduce la fricción y acelera la comprensión sostenida.
+                <div class="grade"><span>De nuevo</span><span>Difícil</span><span>Bien</span><span>Fácil</span></div>
+              </div>
+            </label>
+          </div>
+
+          <!-- Heatmap + stats inspired by screenshot -->
+          <aside class="heat card">
+            <h4 class="heat__title">Racha de estudio (ejemplo)</h4>
+            <div class="heat__grid" role="img" aria-label="Calendario tipo heatmap de 20×7 días">
+              <!-- 20 columnas × 7 filas. Usa clases c0–c4 para intensidad -->
+              <!-- fila 1 -->
+              <span class="c0"></span><span class="c0"></span><span class="c1"></span><span class="c2"></span><span class="c3"></span><span class="c4"></span><span class="c0"></span>
+              <!-- fila 2 -->
+              <span class="c0"></span><span class="c1"></span><span class="c0"></span><span class="c2"></span><span class="c3"></span><span class="c4"></span><span class="c2"></span>
+              <!-- fila 3 -->
+              <span class="c0"></span><span class="c0"></span><span class="c0"></span><span class="c1"></span><span class="c3"></span><span class="c2"></span><span class="c4"></span>
+              <!-- fila 4 -->
+              <span class="c0"></span><span class="c0"></span><span class="c2"></span><span class="c2"></span><span class="c1"></span><span class="c3"></span><span class="c0"></span>
+              <!-- fila 5 -->
+              <span class="c0"></span><span class="c0"></span><span class="c1"></span><span class="c4"></span><span class="c3"></span><span class="c2"></span><span class="c0"></span>
+              <!-- fila 6 -->
+              <span class="c0"></span><span class="c1"></span><span class="c2"></span><span class="c0"></span><span class="c0"></span><span class="c3"></span><span class="c4"></span>
+              <!-- fila 7 -->
+              <span class="c0"></span><span class="c0"></span><span class="c0"></span><span class="c2"></span><span class="c3"></span><span class="c4"></span><span class="c1"></span>
+              <!-- fila 8 -->
+              <span class="c0"></span><span class="c2"></span><span class="c1"></span><span class="c0"></span><span class="c3"></span><span class="c4"></span><span class="c2"></span>
+            </div>
+
+            <div class="legend">
+              <span>Promedio diario: <strong>43</strong> tarjetas</span>
+              <span>Días con estudio: <strong>51%</strong></span>
+              <span>Racha más larga: <strong>13</strong> días</span>
+              <span>Racha actual: <strong>0</strong> días</span>
+            </div>
+          </aside>
+        </div>
+
+        <p class="callout">
+          <strong>Evidencia:</strong> espaciar y recuperar &gt; releer para la memoria a largo plazo.
+          <small>Referencias: PubMed (spacing effect), Docs de Anki (SM-2/FSRS)</small>
         </p>
-        <p class="objective-note">Objetivo del criterio: abrir con voz propia y propósito claro (Reflexión 40%).</p>
-      </section>
+      </article>
 
-      <div class="section-divider" aria-hidden="true"></div>
+      <!-- 2.2 TIME BLOCKING -->
+      <article class="card bento">
+        <header class="bento__head">
+          <h3 class="section__title">2.2 Time-Blocking (bloques de tiempo)</h3>
+          <p class="muted">Un día <em>diseñado</em> para pensar profundo sin multitarea.</p>
+        </header>
 
-      <section id="aprendizajes" class="section learnings">
-        <h2 class="section-title">2) Mis aprendizajes más significativos</h2>
-
-        <article class="card">
-          <h3>
-            <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" style="vertical-align:-3px;margin-right:6px">
-              <rect x="3" y="5" width="14" height="10" rx="2" fill="currentColor" opacity="0.12"></rect>
-              <rect x="7" y="9" width="14" height="10" rx="2" fill="currentColor"></rect>
-            </svg>
-            2.1. Anki y la repetición espaciada
-          </h3>
-          <p><strong>Qué es:</strong> tarjetas de estudio que reaparecen justo antes de que las olvides → memoria duradera.</p>
-          <p><strong>Cómo lo usé:</strong> 15&nbsp;min diarios; tarjetas de pregunta → respuesta corta; mezclo teoría con ejemplos.</p>
-          <p><strong>Por qué funciona (en simple):</strong> espaciar el estudio y recuperar de memoria fortalece el recuerdo más que releer.</p>
-          <p class="mini-tip"><strong>Mini‑tip:</strong> “si puedo explicarlo en una frase, ya lo entendí; si no, hago una tarjeta”.</p>
-          <div class="flashcard" role="button" aria-label="Tarjeta: mostrar respuesta" tabindex="0">
-            <div class="flashcard-inner">
-              <div class="front">¿Qué es el efecto de espaciamiento?</div>
-              <div class="back">Estudiar en sesiones separadas mejora la retención a largo plazo frente a concentrarlo en una sola sesión.</div>
+        <div class="board">
+          <!-- Day columns (Mon–Fri) -->
+          <div class="col">
+            <h4>Lunes</h4>
+            <div class="lane">
+              <div class="block t0500 t0515">Anki warm-up</div>
+              <div class="block t0515 t0815 deep">OMSA — Homework</div>
+              <div class="block t1000 t1200 deep">Deep Work / Meetings</div>
+              <div class="block t1200 t1400">GYM</div>
+              <div class="block t1515 t1645">Work: Review / Learn</div>
             </div>
           </div>
-          <div class="visual flash-stack" aria-label="Tarjetas apiladas de Anki, pregunta arriba">
-            <div class="card">¿Qué es el efecto de espaciamiento?</div>
-            <div class="card">Define 'regla de la cadena'</div>
-            <div class="card">Ejemplo: d/dx (x^3) = 3x^2</div>
-          </div>
-          <div class="callout">
-            <strong>Evidencia clave:</strong> espaciar y recuperar &gt; releer para retener a largo plazo.
-            <br><small>Ver meta‑análisis en <a href="https://pubmed.ncbi.nlm.nih.gov/?term=spacing+effect+meta+analysis" target="_blank" rel="noopener noreferrer">PubMed</a> y <a href="https://docs.ankiweb.net/background.html#spaced-repetition" target="_blank" rel="noopener noreferrer">Docs de Anki</a>.</small>
-          </div>
-          <p class="for-curious">(Para curiosos: Anki usa algoritmos tipo SM‑2 / FSRS para espaciar revisiones.)</p>
-        </article>
 
-        <article class="card">
-          <h3>
-            <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" style="vertical-align:-3px;margin-right:6px">
-              <rect x="3" y="4" width="18" height="16" rx="2" fill="currentColor" opacity="0.12"></rect>
-              <rect x="3" y="7" width="18" height="13" rx="2" fill="currentColor"></rect>
-              <rect x="6" y="3" width="3" height="4" rx="1" fill="currentColor"></rect>
-              <rect x="15" y="3" width="3" height="4" rx="1" fill="currentColor"></rect>
-            </svg>
-            2.2. Time‑Blocking (bloques de tiempo)
-          </h3>
-          <p><strong>Qué es:</strong> planear el día en bloques con una tarea clara por bloque (sin multitarea).</p>
-          <p><strong>Cómo lo usé:</strong> bloques de 30–50&nbsp;min para materias difíciles; bloque corto de “revisión Anki”; bloque de “tareas rápidas”.</p>
-          <p><strong>Por qué funciona (en simple):</strong> protege tiempo de concentración profunda y baja distracciones.</p>
-          <div class="callout">
-            <strong>Evidencia clave:</strong> planificar el día en bloques favorece el enfoque sostenido y el avance consistente.
-            <br><small>Ver <a href="https://www.calnewport.com/blog/2020/08/27/time-block-planning-explained/" target="_blank" rel="noopener noreferrer">explicación de Cal Newport</a>.</small>
-          </div>
-          <div class="visual schedule" aria-label="Bloques de tiempo de estudio en el día">
-            <div class="hours">
-              <span>08:00</span><span>09:00</span><span>10:00</span><span>11:00</span><span>12:00</span>
-            </div>
-            <div class="blocks">
-              <div class="block" style="top:8px; height:44px;"></div>
-              <div class="block deep" style="top:60px; height:44px;"></div>
-              <div class="block" style="top:112px; height:44px;"></div>
+          <div class="col">
+            <h4>Martes</h4>
+            <div class="lane">
+              <div class="block t0500 t0515">Anki warm-up</div>
+              <div class="block t0545 t0625">MATH</div>
+              <div class="block t0630 t0745">Volleyball</div>
+              <div class="block t1000 t1300 deep">Deep Work</div>
+              <div class="block t1330 t1400">Review / Learn</div>
+              <div class="block t1530 t1630">OMSA — Lecture</div>
+              <div class="block t1630 t1700">Anki Review</div>
             </div>
           </div>
-        </article>
 
-        <article class="card">
-          <h3>
-            <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" style="vertical-align:-3px;margin-right:6px">
-              <rect x="3" y="4" width="18" height="16" rx="2" fill="currentColor" opacity="0.12"></rect>
-              <path d="M7 9h7" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
-              <path d="M7 13h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
-              <path d="M7 17h5" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
-              <path d="M5.5 10.5l1.5 1.5 3-3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-            </svg>
-            2.3. Trabajo estructurado (mi “rutina de estudio”)
-          </h3>
-          <ul class="checklist">
-            <li>5&nbsp;min: repasar objetivos del bloque.</li>
-            <li>25–40&nbsp;min: tarea principal (sin notificaciones).</li>
-            <li>5&nbsp;min: mini‑quiz sin ver apuntes (recuperación).</li>
-            <li>2&nbsp;min: anotar dudas + siguiente paso.</li>
+          <div class="col">
+            <h4>Miércoles</h4>
+            <div class="lane">
+              <div class="block t0500 t0515">Anki warm-up</div>
+              <div class="block t0515 t0815 deep">OMSA — Projects</div>
+              <div class="block t1000 t1200 deep">Deep Work</div>
+              <div class="block t1200 t1400">GYM</div>
+              <div class="block t1515 t1645">Work: Review / Learn</div>
+            </div>
+          </div>
+
+          <div class="col">
+            <h4>Jueves</h4>
+            <div class="lane">
+              <div class="block t0500 t0515">Anki warm-up</div>
+              <div class="block t0630 t0745">Volleyball</div>
+              <div class="block t1000 t1300 deep">Deep Work</div>
+              <div class="block t1530 t1630">OMSA — Lecture</div>
+              <div class="block t1630 t1700">Anki Review</div>
+            </div>
+          </div>
+
+          <div class="col">
+            <h4>Viernes</h4>
+            <div class="lane">
+              <div class="block t0500 t0515">Anki warm-up</div>
+              <div class="block t0515 t0815 deep">OMSA — Homework</div>
+              <div class="block t1000 t1200 deep">Deep Work / Meetings</div>
+              <div class="block t1200 t1400">GYM</div>
+            </div>
+          </div>
+
+          <!-- Hour ruler -->
+          <ul class="ruler" aria-hidden="true">
+            <li>5:00</li><li>6:00</li><li>7:00</li><li>8:00</li><li>9:00</li>
+            <li>10:00</li><li>11:00</li><li>12:00</li><li>13:00</li><li>14:00</li>
+            <li>15:00</li><li>16:00</li><li>17:00</li>
           </ul>
-          <div class="visual timeline" aria-label="Rutina de estudio en pasos">
-            <div class="step"><strong>5 min</strong> — Repasar objetivos del bloque</div>
-            <div class="step"><strong>25–40 min</strong> — Tarea principal (sin notificaciones)</div>
-            <div class="step"><strong>5 min</strong> — Mini‑quiz sin ver apuntes</div>
-            <div class="step"><strong>2 min</strong> — Anotar dudas + definir siguiente paso</div>
-          </div>
-          <p><strong>Por qué funciona:</strong> convertir el estudio en pasos repetibles evita perder tiempo y refuerza con práctica de recuperación.</p>
-          <div class="callout">
-            <strong>Evidencia clave:</strong> la práctica de recuperación frecuente potencia el aprendizaje presente y futuro.
-            <br><small>Resumen en <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2907136/" target="_blank" rel="noopener noreferrer">PMC</a>.</small>
-          </div>
-          <div class="quiz">
-            <p><strong>Mini‑quiz:</strong> ¿Qué mejora más la retención?</p>
-            <label><input type="radio" name="q1"> Releer subrayados</label>
-            <label><input type="radio" name="q1" data-correct="1"> Practicar recuperación espaciada</label>
-            <button type="button" class="reveal">Mostrar respuesta</button>
-            <p class="feedback" hidden>Correcto: la práctica de recuperación espaciada.</p>
-          </div>
-        </article>
-      </section>
+        </div>
 
-      <div class="section-divider" aria-hidden="true"></div>
-
-      <section id="experiencia" class="section experience">
-        <h2 class="section-title">3) Mi experiencia favorita</h2>
-        <h3 class="story-title">“De ‘no entiendo’ a ‘puedo explicarlo’ en Derivadas en cálculo”</h3>
-        <p>
-          El reto fue derivadas (regla de la cadena y derivadas de polinomios). Lo dividí en ideas pequeñas y las convertí en tarjetas Anki. Reservé un bloque diario de 40&nbsp;min por dos semanas.
-          Al final, pude explicárselo a un compañero sin mirar mis apuntes. Sentí orgullo porque no fue magia: fue un sistema que puedo repetir.
+        <p class="callout">
+          <strong>Idea clave:</strong> una tarea por bloque, notificaciones fuera y micro-descansos planificados.
         </p>
+      </article>
 
-        <figure class="diagram">
-          <svg viewBox="0 0 880 200" role="img" aria-labelledby="diagramTitle diagramDesc" xmlns="http://www.w3.org/2000/svg">
-            <title id="diagramTitle">Diagrama del flujo de estudio</title>
-            <desc id="diagramDesc">Tres cajas conectadas: Anki conduce a Bloques de tiempo y termina en Quiz rápido.</desc>
-            <!-- Cajas -->
-            <rect x="30" y="60" rx="12" ry="12" width="220" height="80" class="node" />
-            <rect x="330" y="60" rx="12" ry="12" width="220" height="80" class="node" />
-            <rect x="630" y="60" rx="12" ry="12" width="220" height="80" class="node" />
+      <!-- 2.3 TRABAJO ESTRUCTURADO -->
+      <article class="card bento">
+        <header class="bento__head">
+          <h3 class="section__title">2.3 Trabajo estructurado</h3>
+          <p class="muted">Una micro-rutina repetible que elimina fricción.</p>
+        </header>
 
-            <!-- Etiquetas -->
-            <text x="140" y="105" text-anchor="middle" class="label">Anki</text>
-            <text x="440" y="105" text-anchor="middle" class="label">Bloques</text>
-            <text x="740" y="105" text-anchor="middle" class="label">Quiz rápido</text>
-
-            <!-- Flechas -->
-            <defs>
-              <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
-                <path d="M0,0 L0,6 L9,3 z" class="arrowhead"></path>
-              </marker>
-            </defs>
-            <line x1="250" y1="100" x2="330" y2="100" class="arrow" marker-end="url(#arrow)" />
-            <line x1="550" y1="100" x2="630" y2="100" class="arrow" marker-end="url(#arrow)" />
-          </svg>
-          <figcaption>Un sistema simple: Anki → Bloques → Quiz rápido.</figcaption>
-        </figure>
-      </section>
-
-      <div class="section-divider" aria-hidden="true"></div>
-
-      <section id="cambios" class="section changes">
-        <h2 class="section-title">4) Qué cambió en mí</h2>
-        <ul class="bullets">
-          <li><strong>Antes…</strong> me estresaba y releía sin recordar.</li>
-          <li><strong>Ahora…</strong> planifico, practico recuperar y avanzo sin prisa.</li>
-          <li><strong>Aprendí que…</strong> la constancia pesa más que el “talento”.</li>
-          <li><strong>Seguiré…</strong> mi rutina, ajustando bloques según la dificultad.</li>
-        </ul>
-      </section>
-
-      <div class="section-divider" aria-hidden="true"></div>
-
-      <section id="mini-guia" class="section mini-guide">
-        <h2 class="section-title">5) Mini‑guía práctica</h2>
-        <div class="grid">
-          <article class="card">
-            <h3>Anki (5 pasos)</h3>
-            <ol>
-              <li>Ideas cortas</li>
-              <li>Pregunta → respuesta</li>
-              <li>15&nbsp;min al día</li>
-              <li>Explica con tus palabras</li>
-              <li>Si fallas, no pasa nada (mejoras memoria)</li>
-            </ol>
-            <p class="resource"><a href="https://docs.ankiweb.net/background.html#spaced-repetition" target="_blank" rel="noopener noreferrer">Docs de Anki</a></p>
-          </article>
-
-          <article class="card">
-            <h3>Bloques de tiempo</h3>
-            <ol>
-              <li>Plan del día en 10&nbsp;min</li>
-              <li>1 tarea por bloque</li>
-              <li>Notificaciones fuera</li>
-              <li>Micro‑descansos</li>
-              <li>Ajusta al final del día</li>
-            </ol>
-            <p class="resource"><a href="https://www.calnewport.com/blog/2020/08/27/time-block-planning-explained/" target="_blank" rel="noopener noreferrer">Time‑blocking explicado</a></p>
-          </article>
-
-          <article class="card">
-            <h3>Trabajo estructurado</h3>
-            <ol>
-              <li>Objetivo claro</li>
-              <li>Trabaja profundo</li>
-              <li>Mini‑quiz</li>
-              <li>Apunta dudas</li>
-              <li>Define el siguiente paso</li>
-            </ol>
-            <p class="resource"><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2907136/" target="_blank" rel="noopener noreferrer">Evidencia en PMC</a></p>
-          </article>
+        <div class="steps">
+          <div class="step"><span>1</span> 5 min — Definir objetivo del bloque</div>
+          <div class="step"><span>2</span> 25–40 min — Tarea principal (modo avión)</div>
+          <div class="step"><span>3</span> 5 min — Mini-quiz sin apuntes</div>
+          <div class="step"><span>4</span> 2 min — Anotar dudas + <em>siguiente paso</em></div>
         </div>
-      </section>
 
-      <div class="section-divider" aria-hidden="true"></div>
+        <div class="ring" style="--pct: .75" role="img" aria-label="Progreso ejemplo 75%">
+          <strong>75%</strong>
+          <span>Bloque completado</span>
+        </div>
+      </article>
+    </section>
 
-      <section class="section next-steps">
-        <h2 class="section-title">Mi plan para el próximo mes</h2>
-        <div class="visual" style="display:flex;align-items:center;gap:.75rem;justify-content:flex-start">
-          <div class="progress-ring" style="--v:100"><span>15m</span></div>
-          <div>
-            <strong>Revisión Anki</strong><br><small>Completado hoy</small>
+    <!-- ====== EXPERIENCIA ====== -->
+    <section id="experiencia" class="section">
+      <div class="grid two">
+        <div class="card">
+          <h2 class="kicker">3) Experiencia favorita</h2>
+          <h3 class="section__title">De “no entiendo” a “puedo explicarlo” (Derivadas)</h3>
+          <p>
+            Dividí el tema en piezas pequeñas, las convertí en tarjetas y reservé un bloque diario de 40&nbsp;min.
+            Dos semanas después pude explicarlo sin mirar apuntes. La clave: un sistema que puedo repetir en cualquier tema.
+          </p>
+        </div>
+
+        <figure class="flow card">
+          <figcaption>Flujo: Anki → Bloques → Quiz rápido</figcaption>
+          <div class="flow__row">
+            <div class="pill">Anki</div>
+            <div class="arrow">→</div>
+            <div class="pill">Bloques</div>
+            <div class="arrow">→</div>
+            <div class="pill">Quiz</div>
           </div>
-        </div>
-        <ol class="checklist">
-          <li>15 min diarios de Anki (máx. 20 tarjetas nuevas/día).</li>
-          <li>2 bloques de 40 min para la materia más difícil (lun‑vie).</li>
-          <li>Mini‑quiz al final de cada bloque + anotar siguiente paso.</li>
-        </ol>
-      </section>
-    </main>
-
-    <footer class="page-footer">
-      <div class="container">
-        <small>Referencias: PubMed, Docs de Anki, Cal Newport, PMC. © <span id="year"></span></small>
+        </figure>
       </div>
-    </footer>
+    </section>
 
-    <script>
-      const y = document.getElementById('year');
-      if (y) { y.textContent = new Date().getFullYear().toString(); }
-      document.addEventListener('click', (e) => {
-        if (e.target && e.target.matches('.reveal')) {
-          const quiz = e.target.closest('.quiz');
-          const correct = quiz ? quiz.querySelector('input[data-correct]') : null;
-          const feedback = quiz ? quiz.querySelector('.feedback') : null;
-          if (feedback) {
-            feedback.hidden = false;
-            if (correct && correct.checked) feedback.textContent = '¡Bien! La práctica de recuperación espaciada.';
-            else feedback.textContent = 'Casi: recuperar de memoria espaciado supera a la relectura.';
-          }
-        }
-      });
-    </script>
-  </body>
-  </html>
+    <!-- ====== CAMBIOS ====== -->
+    <section id="cambios" class="section">
+      <h2 class="kicker">4) Qué cambió en mí</h2>
+      <div class="grid two">
+        <div class="card contrast">
+          <h3 class="section__title">Antes</h3>
+          <ul class="list">
+            <li>Estudio reactivo y ansiedad.</li>
+            <li>Relecturas largas sin retención.</li>
+            <li>Tiempo sin dirección.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3 class="section__title">Ahora</h3>
+          <ul class="list">
+            <li>Plan + bloques protegidos.</li>
+            <li>Recuperación espaciada diaria.</li>
+            <li>Pasos repetibles y progreso visible.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
+    <!-- ====== MINI GUÍA ====== -->
+    <section id="mini-guia" class="section">
+      <h2 class="kicker">5) Mini-guía práctica</h2>
+      <div class="grid three">
+        <article class="card">
+          <h3 class="section__title">Anki (5 pasos)</h3>
+          <ol class="tight">
+            <li>Una idea por tarjeta</li>
+            <li>Pregunta → respuesta breve</li>
+            <li>15 min diarios</li>
+            <li>Explica con tus palabras</li>
+            <li>Fallar también entrena</li>
+          </ol>
+          <p class="muted small">Docs de Anki • SM-2/FSRS</p>
+        </article>
 
+        <article class="card">
+          <h3 class="section__title">Time-Blocking</h3>
+          <ol class="tight">
+            <li>Plan de día (10 min)</li>
+            <li>1 tarea por bloque</li>
+            <li>Micro-descansos</li>
+            <li>Cierre con ajustes</li>
+          </ol>
+          <p class="muted small">Enfoque sostenido &gt; multitarea</p>
+        </article>
+
+        <article class="card">
+          <h3 class="section__title">Rutina</h3>
+          <ol class="tight">
+            <li>Objetivo</li>
+            <li>Trabajo profundo</li>
+            <li>Mini-quiz</li>
+            <li>Próximo paso</li>
+          </ol>
+          <p class="muted small">Diseño simple, repetible</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="shell">
+      <small>Referencias: PubMed • Docs de Anki • Cal Newport • PMC • © <span id="y">2025</span></small>
+    </div>
+  </footer>
+</body>
+</html>
